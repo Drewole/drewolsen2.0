@@ -1,0 +1,66 @@
+/*  7. Forms  --------------------------------------------------------- */
+
+form {
+  margin-bottom: 24px;
+}
+fieldset {
+  margin-bottom: 24px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  display: block;
+  padding: 18px 15px;
+  margin: 0 0 24px 0;
+  border: 0;
+  outline: none;
+  min-width: 225px;
+  max-width: 100%;
+  font-size: 15px;
+  line-height: 24px;
+  color: #647373;
+  background: #d3d9d9;
+}
+
+/* select { padding: 0;
+   width: 220px;
+   } */
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  color: #b3b7bc;
+  background-color: #3d4145;
+}
+
+textarea {
+  min-height: 220px;
+}
+
+label,
+legend {
+  font: 16px/24px "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: 12px 0;
+  color: #3d4145;
+  display: block;
+}
+label span,
+legend span {
+  color: #8b9798;
+  font: 14px/24px "Montserrat", sans-serif;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  font-size: 15px;
+  color: #737373;
+}
+
+input[type="checkbox"] {
+  display: inline;
+}
