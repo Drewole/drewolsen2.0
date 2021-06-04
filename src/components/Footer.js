@@ -11,7 +11,7 @@ const Footer = () => (
         <SocialLinks />
 
         <ul className="copyright">
-          <li>&copy; Copyright 2019 DrewOlsen.Design</li>
+          <li>&copy; Copyright 2021 DrewOlsen.Design</li>
           <li>
             Built with{" "}
             <a href="https://www.gatsbyjs.org/">

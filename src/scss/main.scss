@@ -20,7 +20,7 @@ $outside-link: $aqua;
 
 // TODO Maybe instead of the pop up modal we just slide out a drawer below. The markup should already be there.
 
-// TODO Add your own contact page
+// TODO Add your own contact section
 
 // TODO Add gifs in place of the images using react-gif-player. NEED TO LEARN HOW TO LOAD ON DEMAND FOR THIS. Fill a div with fetched data. LOAD TIMES WILL BE ATTROCIOUS if not
 
@@ -148,7 +148,7 @@ header {
 	}
 	.banner-text {
 		width: 100%;
-		padding-top: 100px;
+		padding: 200px 0;
 		hr {
 			width: 60%;
 			margin: 0 auto;

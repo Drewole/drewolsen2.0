@@ -28,7 +28,7 @@ const About = () => (
 					clients, and ensure I am using the most appropriate technology for their project.
 				</p>
 				<p>
-					Have a project you might want my help with?{' '}
+					Have a project you might want my help with?
 					<a className="form-link" href="https://forms.gle/s9VwLkV3KA4xjcmk6">
 						Let's chat.
 					</a>
@@ -40,6 +40,7 @@ const About = () => (
 				</p>
 				<div className="row">
 					<div className="columns contact-details">
+
 						<h2>Contact Details</h2>
 						<h4>Drew Olsen</h4>
 						<p className="address">
@@ -62,6 +63,7 @@ const About = () => (
 								Contact Me
 							</a>
 						</p>
+
 					</div>
 					<div className="columns download">
 						<a href="https://forms.gle/s9VwLkV3KA4xjcmk6" className="button">
@@ -70,6 +72,7 @@ const About = () => (
 							</span>
 							Contact Me
 						</a>
+
 					</div>
 				</div>
 			</div>

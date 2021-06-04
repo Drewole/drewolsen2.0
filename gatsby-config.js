@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Drew Olsen Portfolio",
+    available: true,
   },
   plugins: [
     {
@@ -39,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Montserrat\:300,400,500,700,800` // you can also specify font weights and styles
+          `Montserrat:300,400,500,700,800` // you can also specify font weights and styles
         ],
         display: 'swap'
       }

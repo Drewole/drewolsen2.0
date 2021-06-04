@@ -2,11 +2,10 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MdCardTravel } from 'react-icons/md';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from 'gatsby-background-image';
 import SocialLinks from './SocialLinks';
 
-const BannerImage = ({ className }) => {
+const BannerImage = () => {
 	const data = useStaticQuery(
 		graphql`
       query {
@@ -27,7 +26,7 @@ const BannerImage = ({ className }) => {
 	return (
 		<BackgroundImage
 			Tag="section"
-			className={className, "banner-text"}
+			className={"banner-text"}
 			fluid={imageData}
 			backgroundColor={`#040e18`}
 		>

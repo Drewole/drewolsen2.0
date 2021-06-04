@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
   const mainImage = getImage(props.frontImg)
-  console.log(mainImage, thumbImage, "Main image and thumb image deets")
 
   return (
     <div className="project">
