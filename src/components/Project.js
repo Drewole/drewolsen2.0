@@ -3,13 +3,16 @@ import { FaPlus, FaTag, FaTimes } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Project = (props) => {
+  const thumbImage = getImage(props.squareImg)
+  const mainImage = getImage(props.frontImg)
+  console.log(mainImage, thumbImage, "Main image and thumb image deets")
 
   return (
     <div className="project">
       <div className="columns portfolio-item">
         <div className="item-wrap">
           <a href={`#modal-${props.slug}`}>
-            <GatsbyImage fluid={thumbImage} alt={props.title} />
+            <GatsbyImage image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{props.title}</h5>
@@ -27,7 +30,7 @@ const Project = (props) => {
       {/* modal-${props.slug} */}
       <div className="popup-modal-shadow">
         <div id={`#`} className="popup-modal mfp-hide">
-          <GatsbyImage fluid={mainImage} alt={props.title} />
+          <GatsbyImage image={mainImage} alt={props.title} />
           <div className="description-box">
             <h4>{props.title}</h4>
             <p>{props.longDescription}</p>

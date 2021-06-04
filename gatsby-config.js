@@ -32,18 +32,23 @@ module.exports = {
         background_color: `#2f2b41`,
         theme_color: `#fd4d52`,
         display: `standalone`,
-        icon: `src/images/logo.svg`,
+        icon: `src/images/favicon.png`,
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        google: {
-          family: 'Montserrat',
-          variants: [`300`, `400`, `500`, `700`, `800`]
-
-        },
+        fonts: [
+          `Montserrat\:300,400,500,700,800` // you can also specify font weights and styles
+        ],
+        display: 'swap'
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-11075037-4",
+      },
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -53,25 +58,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./data/`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-11075037-4",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/favicon.png",
-      },
-    },
   ],
 };

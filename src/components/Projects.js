@@ -3,51 +3,55 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Project from './Project';
 
 const Projects = () => {
+
 	const data = useStaticQuery(graphql`
-		{
-		allProjectsJson {
-			edges {
-			node {
-				name
-				id
-				type
-				extSite
-				slug
-				year
-				longDescription
-				shortDescription
-				tags
-				squareImg {
-					childImageSharp {
-						fluid {
-						srcWebp
-						originalName
-						}
-					}
-				}
-				frontImg {
-					childImageSharp {
-						id
-						fluid(maxWidth: 1450, maxHeight: 700, fit: COVER) {
-						srcWebp
-						originalName
-						}
-					}
-				}
-				insideImg {
-					childImageSharp {
-						fluid {
-						srcWebp
-						}
-					}
-				}
-			}
-			}
-		}
-		}
-	`);
+    {
+      allProjectsJson {
+        edges {
+          node {
+            name
+            id
+            type
+            extSite
+            slug
+            year
+            longDescription
+            shortDescription
+            tags
+            frontImg {
+              childImageSharp {
+                gatsbyImageData(
+					placeholder: BLURRED
+					formats: [WEBP]
+					width: 1400
+					height: 800
+				)
+              }
+            }
+            insideImg {
+              childImageSharp {
+                gatsbyImageData(
+					placeholder: BLURRED
+					formats: [WEBP]
+					)
+              }
+            }
+            squareImg {
+              childImageSharp {
+                gatsbyImageData(
+					width: 800
+					placeholder: BLURRED
+					formats: [WEBP]
+					)
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 	const projects = data.allProjectsJson.edges
-	console.log(projects)
+	console.log(projects, "Projects")
 	return (
 		<section id="portfolio">
 			<div className="row">
@@ -66,8 +70,6 @@ const Projects = () => {
 							const slug = project.slug;
 							const squareImg = project.squareImg;
 							const frontImg = project.frontImg;
-							console.log(squareImg)
-							console.log(frontImg)
 							return (
 								<Project
 									key={id}

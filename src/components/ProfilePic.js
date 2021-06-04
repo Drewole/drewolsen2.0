@@ -7,6 +7,10 @@ export default function ProfilePic() {
     className="profile-pic"
     src="../images/drewPic.jpg"
     alt="Illustration of Drew Olsen"
+    placeholder="blurred"
+    layout="constrained"
+    width={250}
+    height={250}
   />
 
 }
