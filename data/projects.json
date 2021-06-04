@@ -46,6 +46,21 @@
 		"extSite": "https://enigmatic-sierra-05882.herokuapp.com/"
 	},
 	{
+		"name": "Javascript Weather Dash",
+		"year": "2021",
+		"slug": "javascript-weather",
+		"type": "Javascript, CSS, HTML App",
+		"shortDescription": "Utilizing the open weather API to make a Weather App",
+		"longDescription": "Quick dashboard that pulls API data from two different sources. One to get coordinates for a city search. Another to get the weather with those coordinates. Also pulled in Moment.js for some Unix time stamp conversion.",
+		"tags": "Javascript, CSS3, HTML5, Open Weather API",
+		"github":"/Drewole/js-weather-dash",
+		"squareImg": "./images/weather-square.jpg",
+		"frontImg": "./images/weather-main.jpg",
+		"insideImg": "",
+		"mobileImg": "",
+		"extSite": "https://drewole.github.io/js-weather-dash/"
+	},
+	{
 		"name": "Staincrete Decorative Concrete",
 		"year": "2015",
 		"slug": "staincrete",
