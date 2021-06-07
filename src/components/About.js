@@ -18,14 +18,11 @@ const About = () => (
 			<div className="nine columns main-col">
 				<h2>About Me</h2>
 				<p>
-					I am a Front-End Web Developer with around ten years of experience. Some might consider me a
-					Designer that can Code. I have an eye for design but also understand, can implement, and explain the
-					technical side of Front End Website Development.
+					I am a Front-End Web Developer with around ten years of experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
 				</p>
 				<p>
 					My start in Web Development began ten years ago and I have strived to be on the cutting edge of the
-					new web technologies ever since. This has helped me increase the quality of work I can provide my
-					clients, and ensure I am using the most appropriate technology for their project.
+					new web technologies ever since. Because of this, I recently graduated from an intense 12 - week boot camp to level up my back-end skills. This is a constant practice to increase the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
 				</p>
 				<p>
 					Have a project you might want my help with?

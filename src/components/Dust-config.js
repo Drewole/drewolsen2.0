@@ -26,11 +26,11 @@ export default {
             }
         },
         "opacity": {
-            "value": 0.6865584482200772,
+            "value": 0.55584482200772,
             "random": true,
             "anim": {
                 "enable": true,
-                "speed": 1,
+                "speed": .2,
                 "opacity_min": 0.1,
                 "sync": false
             }
