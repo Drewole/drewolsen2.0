@@ -14,6 +14,7 @@ const Projects = () => {
             type
             extSite
             slug
+			github
             year
             longDescription
             shortDescription
@@ -63,6 +64,7 @@ const Projects = () => {
 							const shortDescription = project.shortDescription;
 							const longDescription = project.longDescription;
 							const id = project.id;
+							const github = project.github;
 							const tags = project.tags;
 							const type = project.type;
 							const year = project.year;
@@ -76,6 +78,7 @@ const Projects = () => {
 									id={id}
 									title={title}
 									year={year}
+									github={github}
 									extSite={extSite}
 									shortDescription={shortDescription}
 									longDescription={longDescription}

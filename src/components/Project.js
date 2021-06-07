@@ -1,10 +1,11 @@
 import React from "react"
-import { FaPlus, FaTag, FaTimes } from "react-icons/fa"
+import { FaPlus, FaTag, FaTimes, FaGithub } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
   const mainImage = getImage(props.frontImg)
+  console.log(props.github)
   return (
     <>
       <div className="columns portfolio-item">
@@ -39,14 +40,18 @@ const Project = (props) => {
 
           <div className="link-box">
             {props.extSite && (
-              <a href={`https://projects.drewolsen.design/${props.slug}`}>
+              <a className="btn" href={`${props.extSite}`}>
                 View Site
               </a>
             )}
 
-            <a href="#portfolio" className="popup-modal-dismiss">
+            <a href="#portfolio" className="btn popup-modal-dismiss">
               Close
             </a>
+            {props.github && (
+              <p className="github"><a href={`https://github.com${props.github}`}>View on <span>Github <FaGithub /></span></a></p>
+            )}
+
           </div>
           <a href="#portfolio" className="popup-modal-close">
             <FaTimes />

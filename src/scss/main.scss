@@ -651,7 +651,31 @@ ul#nav {
 		position: relative;
 		background: none;
 		padding: 25px 10%;
-		a {
+		.github {
+			text-align: center;
+			opacity: 1;
+			a {
+			font-size: 1rem;
+			text-transform: uppercase;
+			color: lighten($gray, 10%);
+			text-align: center;
+			
+			transition: opacity .2s ease-in-out;
+
+				span {
+					font-weight: bold;
+					color: $gray;
+
+				}
+				&:visited {
+					color: lighten($gray, 10%);
+				}
+			}
+			&:hover {
+				opacity: .7;
+			}
+		}
+		a.btn {
 			color: #fff;
 			font: 11px/21px "Montserrat", sans-serif;
 			font-weight: bold;
