@@ -1,4 +1,4 @@
-export default {
+const dustConfig = {
     "particles": {
         "number": {
             "value": 48,
@@ -108,3 +108,4 @@ export default {
     },
     "retina_detect": false
 };
+export default dustConfig;
