@@ -26,12 +26,12 @@ const dustConfig = {
             }
         },
         "opacity": {
-            "value": 0.55584482200772,
+            "value": 0.35584482200772,
             "random": true,
             "anim": {
                 "enable": true,
-                "speed": .2,
-                "opacity_min": 0.1,
+                "speed": .1,
+                "opacity_min": 0.05,
                 "sync": false
             }
         },

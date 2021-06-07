@@ -33,7 +33,7 @@ const About = () => (
 
 				<h3>My skills include but are not limited to:</h3>
 				<p className="small">
-					HTML5, SCSS, Responsive Design, JS, React.js, Express.js, Node.js , Gatsby, Sketch, Figma, Adobe Suite, Netlify, Webpack, Docker, Git, Gulp
+					HTML5 - SCSS - CSS3 - Responsive Design - JS - React.js - Express.js - MongoDB - MySQL - Node.js - Gatsby - Sketch - Figma - Adobe Suite - Netlify - Webpack - Docker - Git - Gulp
 				</p>
 				<div className="row">
 					<div className="columns contact-details">

@@ -163,6 +163,7 @@ header {
 			letter-spacing: -1px;
 			margin: 0 auto 18px auto;
 			text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+			pointer-events: none;
 		}
 		h3 {
 			font: 24px/1.5em "Montserrat", serif;
@@ -171,11 +172,14 @@ header {
 			margin: 0 auto;
 			width: 80%;
 			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+			pointer-events: none;
 
 			span {
 				color: #fff;
 			}
-			a {
+			
+		}
+		a.btn {
 				font: 16px/1.5em "Montserrat", serif;
 				color: #fff;
 				font-weight: 700;
@@ -205,7 +209,6 @@ header {
 					}
 				}
 			}
-		}
 	}
 	//// Header Social Links
 	.social {
@@ -359,7 +362,9 @@ ul#nav {
 		color: #cdcdcd;
 		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 		&.small {
-			font-size: 1em;
+			font-size: .9em;
+			text-transform: uppercase;
+			font-weight: 700;
 		}
 	}
 

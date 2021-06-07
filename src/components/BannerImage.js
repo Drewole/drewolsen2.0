@@ -37,13 +37,14 @@ const BannerImage = () => {
 				A Multi-faceted Web Developer with a knack for effectively conceptualizing and
 				delivering elegant, user-friendly solutions.
 								<br />
-				<AnchorLink title="View my portfolio" to="/#portfolio">
-					View My Portfolio{' '}
-					<span>
-						<MdCardTravel />
-					</span>
-				</AnchorLink>
+
 			</h3>
+			<AnchorLink className="btn" title="View my portfolio" to="/#portfolio">
+				View My Portfolio{' '}
+				<span>
+					<MdCardTravel />
+				</span>
+			</AnchorLink>
 
 			<hr />
 			<SocialLinks />
