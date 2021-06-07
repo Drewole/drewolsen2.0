@@ -42,7 +42,9 @@ $outside-link: $aqua;
 }
 
 /////////// General Styles
-
+.bold {
+	font-weight: 700;
+}
 body {
 	background: darken($purple, 4%);
 	margin: 0;

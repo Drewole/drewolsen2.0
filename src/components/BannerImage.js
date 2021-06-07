@@ -34,7 +34,7 @@ const BannerImage = () => {
 			<Dust />
 			<h1 className="responsive-headline">Full-Stack Web Developer</h1>
 			<h3>
-				A Multi-faceted Full-Stack Web Developer with a knack for effectively conceptualizing and
+				A Multi-faceted Web Developer with a knack for effectively conceptualizing and
 				delivering elegant, user-friendly solutions.
 								<br />
 				<AnchorLink title="View my portfolio" to="/#portfolio">
