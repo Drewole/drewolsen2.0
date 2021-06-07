@@ -4,6 +4,7 @@ import { MdCardTravel } from 'react-icons/md';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BackgroundImage from 'gatsby-background-image';
 import SocialLinks from './SocialLinks';
+import Dust from './Dust';
 
 const BannerImage = () => {
 	const data = useStaticQuery(
@@ -30,6 +31,7 @@ const BannerImage = () => {
 			fluid={imageData}
 			backgroundColor={`#040e18`}
 		>
+			<Dust />
 			<h1 className="responsive-headline">Full-Stack Web Developer</h1>
 			<h3>
 				A Multi-faceted Full-Stack Web Developer with a knack for effectively conceptualizing and

@@ -5,9 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
   const mainImage = getImage(props.frontImg)
-
   return (
-    <div className="project">
+    <>
       <div className="columns portfolio-item">
         <div className="item-wrap">
           <a href={`#modal-${props.slug}`}>
@@ -28,7 +27,7 @@ const Project = (props) => {
       </div>
       {/* modal-${props.slug} */}
       <div className="popup-modal-shadow">
-        <div id={`#`} className="popup-modal mfp-hide">
+        <div id={`modal-${props.slug}`} className="popup-modal mfp-hide">
           <GatsbyImage image={mainImage} alt={props.title} />
           <div className="description-box">
             <h4>{props.title}</h4>
@@ -54,7 +53,7 @@ const Project = (props) => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

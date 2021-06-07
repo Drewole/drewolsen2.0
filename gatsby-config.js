@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -100,
+        offset: -100
       },
     },
     {
@@ -53,9 +53,9 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`
   ],
 };

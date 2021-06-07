@@ -51,7 +51,7 @@ const Projects = () => {
     }
   `)
 	const projects = data.allProjectsJson.edges
-	console.log(projects, "Projects")
+
 	return (
 		<section id="portfolio">
 			<div className="row">
