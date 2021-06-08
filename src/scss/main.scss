@@ -477,13 +477,19 @@ ul#nav {
 		letter-spacing: 1px;
 		text-align: center;
 		margin-bottom: 48px;
-		color: darken($aqua, 25%);
+		color: hsla(211, 20%, 24%,1);
 	}
-	#portfolio-wrapper .columns {
-		padding: 0 5px;
+	#portfolio-wrapper {
+		padding: 2%;
 		margin-bottom: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.portfolio-item {
+		max-width: 29%;
+		margin: 2%;
+		min-width: 150px;
 		.portfolio-item-meta {
 			padding: 18px;
 			max-width: 100%;
@@ -515,7 +521,7 @@ ul#nav {
 			-webkit-box-shadow: 0px 14px 13px -12px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
 			box-shadow: 0px 14px 13px -12px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
 			transition: all 0.2s ease-in-out;
-			border-radius: 2px;
+			border-radius: 4px;
 
 			&:hover {
 				transform: scale(
@@ -654,26 +660,26 @@ ul#nav {
 		.github {
 			text-align: center;
 			opacity: 1;
-			a {
-			font-size: 1rem;
-			text-transform: uppercase;
-			color: lighten($gray, 10%);
-			text-align: center;
-			
-			transition: opacity .2s ease-in-out;
+				a {
+				font-size: 1rem;
+				text-transform: uppercase;
+				color: lighten($gray, 10%);
+				text-align: center;
+				
+				transition: opacity .2s ease-in-out;
 
-				span {
-					font-weight: bold;
-					color: $gray;
+					span {
+						font-weight: bold;
+						color: $gray;
 
+					}
+					&:visited {
+						color: lighten($gray, 10%);
+					}
 				}
-				&:visited {
-					color: lighten($gray, 10%);
+				&:hover {
+					opacity: .7;
 				}
-			}
-			&:hover {
-				opacity: .7;
-			}
 		}
 		a.btn {
 			color: #fff;
@@ -836,6 +842,15 @@ footer .social li:first-child {
 		font-size: 20px;
 		width: 80%;
 	}
+	#portfolio {
+		#portfolio-wrapper {
+			padding: 4%;
+		}
+		.portfolio-item {
+			max-width: 44%;
+			margin: 2%;
+		}
+	}
 
 	/* About Section
  ------------------------------------------------------------------- */
@@ -960,10 +975,10 @@ footer .social li:first-child {
 		}
 	}
 	/////////// Portfolio #portfolio {
+
 	.portfolio-item {
 		margin-bottom: 45px !important;
 		.item-wrap {
-			border-radius: 6px;
 			.link-icon {
 				opacity: 1 !important;
 			}
@@ -1096,6 +1111,15 @@ footer .copyright {
 			footer .twelve.columns {
 				width: auto;
 			}
+		}
+	}
+	#portfolio {
+		#portfolio-wrapper {
+			padding: 4%;
+		}
+		.portfolio-item {
+			max-width: 100%;
+			margin: 2%;
 		}
 	}
 }

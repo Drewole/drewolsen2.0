@@ -55,43 +55,39 @@ const Projects = () => {
 
 	return (
 		<section id="portfolio">
-			<div className="row">
-				<div className="twelve columns collapsed">
-					<h1>Some of My Work.</h1>
-					<div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-						{projects.map(({ node: project }) => {
-							const title = project.name;
-							const shortDescription = project.shortDescription;
-							const longDescription = project.longDescription;
-							const id = project.id;
-							const github = project.github;
-							const tags = project.tags;
-							const type = project.type;
-							const year = project.year;
-							const extSite = project.extSite;
-							const slug = project.slug;
-							const squareImg = project.squareImg;
-							const frontImg = project.frontImg;
-							return (
-								<Project
-									key={id}
-									id={id}
-									title={title}
-									year={year}
-									github={github}
-									extSite={extSite}
-									shortDescription={shortDescription}
-									longDescription={longDescription}
-									tags={tags}
-									type={type}
-									slug={slug}
-									squareImg={squareImg}
-									frontImg={frontImg}
-								/>
-							);
-						})}
-					</div>
-				</div>
+			<h1>Some of My Work.</h1>
+			<div id="portfolio-wrapper">
+				{projects.map(({ node: project }) => {
+					const title = project.name;
+					const shortDescription = project.shortDescription;
+					const longDescription = project.longDescription;
+					const id = project.id;
+					const github = project.github;
+					const tags = project.tags;
+					const type = project.type;
+					const year = project.year;
+					const extSite = project.extSite;
+					const slug = project.slug;
+					const squareImg = project.squareImg;
+					const frontImg = project.frontImg;
+					return (
+						<Project
+							key={id}
+							id={id}
+							title={title}
+							year={year}
+							github={github}
+							extSite={extSite}
+							shortDescription={shortDescription}
+							longDescription={longDescription}
+							tags={tags}
+							type={type}
+							slug={slug}
+							squareImg={squareImg}
+							frontImg={frontImg}
+						/>
+					);
+				})}
 			</div>
 		</section>
 	);

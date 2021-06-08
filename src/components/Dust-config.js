@@ -26,7 +26,7 @@ const dustConfig = {
             }
         },
         "opacity": {
-            "value": 0.35584482200772,
+            "value": 0.3084482200772,
             "random": true,
             "anim": {
                 "enable": true,
@@ -54,9 +54,9 @@ const dustConfig = {
         },
         "move": {
             "enable": true,
-            "speed": 0.8,
+            "speed": 0.4,
             "direction": "bottom",
-            "random": false,
+            "random": true,
             "straight": false,
             "out_mode": "out",
             "bounce": false,
@@ -72,7 +72,7 @@ const dustConfig = {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "repulse"
+                "mode": "grab"
             },
             "onclick": {
                 "enable": true,
@@ -82,17 +82,17 @@ const dustConfig = {
         },
         "modes": {
             "grab": {
-                "distance": 400,
+                "distance": 140,
                 "line_linked": {
-                    "opacity": 1
+                    "opacity": 0.1
                 }
             },
             "bubble": {
-                "distance": 400,
+                "distance": 100,
                 "size": 40,
                 "duration": 2,
                 "opacity": 8,
-                "speed": 3
+                "speed": 1
             },
             "repulse": {
                 "distance": 183.8161838161838,

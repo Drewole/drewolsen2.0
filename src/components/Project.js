@@ -7,7 +7,7 @@ const Project = (props) => {
   const mainImage = getImage(props.frontImg)
   return (
     <>
-      <div className="columns portfolio-item">
+      <div className="portfolio-item">
         <div className="item-wrap">
           <a href={`#modal-${props.slug}`}>
             <GatsbyImage image={thumbImage} alt={props.title} />
