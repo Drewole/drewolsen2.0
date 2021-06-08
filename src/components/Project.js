@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
   const mainImage = getImage(props.frontImg)
-  console.log(props.github)
   return (
     <>
       <div className="columns portfolio-item">
