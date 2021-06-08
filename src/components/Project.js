@@ -26,7 +26,6 @@ const Project = (props) => {
           </a>
         </div>
       </div>
-      {/* modal-${props.slug} */}
       <div className="popup-modal-shadow">
         <div id={`modal-${props.slug}`} className="popup-modal mfp-hide">
           <GatsbyImage image={mainImage} alt={props.title} />
