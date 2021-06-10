@@ -1,62 +1,71 @@
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer';
+import HeaderNav from '../components/HeaderNav';
+import Layout from '../layouts/Layout';
 
 const Contact = () => {
     const notify = () => toast("Received your message!");
 
     return (
-        <section id="contact">
-            <div className="row">
-                <form id='contact-form' noValidate>
-                    {/* Row 1 of form */}
-                    <div className='row formRow'>
-                        <div className='col-6'>
-                            <input
-                                type='text'
-                                name='name'
-                                className='form-control formInput'
-                                placeholder='Name'
-                            ></input>
+        <Layout>
+            <section id="contact">
+                <div className="row">
+                    <h2>Hollar at Me</h2>
+                    <p className="message">Shoot me a message and I will typically respond within one business day.</p>
+                    <form id='contact-form' noValidate>
+                        {/* Row 1 of form */}
+                        <div className='row formRow'>
+                            <div className='col-6'>
+                                <input
+                                    type='text'
+                                    name='name'
+                                    className='form-control formInput'
+                                    placeholder='Name'
+                                ></input>
+                            </div>
+                            <div className='col-6'>
+                                <input
+                                    type='email'
+                                    name='email'
+                                    className='form-control formInput'
+                                    placeholder='Email address'
+                                ></input>
+                            </div>
                         </div>
-                        <div className='col-6'>
-                            <input
-                                type='email'
-                                name='email'
-                                className='form-control formInput'
-                                placeholder='Email address'
-                            ></input>
+                        {/* Row 2 of form */}
+                        <div className='row formRow'>
+                            <div className='col'>
+                                <input
+                                    type='text'
+                                    name='subject'
+                                    className='form-control formInput'
+                                    placeholder='Subject'
+                                ></input>
+                            </div>
                         </div>
-                    </div>
-                    {/* Row 2 of form */}
-                    <div className='row formRow'>
-                        <div className='col'>
-                            <input
-                                type='text'
-                                name='subject'
-                                className='form-control formInput'
-                                placeholder='Subject'
-                            ></input>
+                        {/* Row 3 of form */}
+                        <div className='row formRow'>
+                            <div className='col'>
+                                <textarea
+                                    rows={3}
+                                    name='message'
+                                    className='form-control formInput'
+                                    placeholder='Message'
+                                ></textarea>
+                            </div>
                         </div>
-                    </div>
-                    {/* Row 3 of form */}
-                    <div className='row formRow'>
-                        <div className='col'>
-                            <textarea
-                                rows={3}
-                                name='message'
-                                className='form-control formInput'
-                                placeholder='Message'
-                            ></textarea>
-                        </div>
-                    </div>
-                    <button className='submit-btn' type='submit'>
-                        Submit
+                        <button className='button' type='submit'>
+                            Submit
                 </button>
-                </form>
+                    </form>
 
-            </div>
-        </section>
+                </div>
+            </section>
+            <Footer />
+        </Layout>
+
     )
 }
 

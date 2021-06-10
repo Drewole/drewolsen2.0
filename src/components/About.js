@@ -3,6 +3,7 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import { MdDescription } from 'react-icons/md';
 import { siteMetadata } from '../../gatsby-config';
 import ProfilePic from './ProfilePic';
+import { Link } from "gatsby"
 
 const availabilityText = siteMetadata.available === true ? 'available!' : 'unavailable :(';
 const available = siteMetadata.available === true ? 'available' : '';
@@ -29,6 +30,7 @@ const About = () => (
 					<a className="form-link" href="https://forms.gle/s9VwLkV3KA4xjcmk6">
 						Let's chat.
 					</a>
+
 				</p>
 
 				<h3>My skills include but are not limited to:</h3>
@@ -63,12 +65,12 @@ const About = () => (
 
 					</div>
 					<div className="columns download">
-						<a href="https://forms.gle/s9VwLkV3KA4xjcmk6" className="button">
+						<Link to="/contact" className="button">
 							<span>
 								<MdDescription />
 							</span>
 							Contact Me
-						</a>
+						</Link>
 
 					</div>
 				</div>
