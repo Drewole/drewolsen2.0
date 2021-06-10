@@ -1,12 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 import logo from "../images/logo.svg"
 
 const Sitetitle = () => (
-  <a className="logo" href="/#home">
+  <Link className="logo" to="/">
     <h1 className="site-title">
       <img alt="Drew Olsen Design Logo" src={logo} /> Drew Olsen
     </h1>
-  </a>
+  </Link>
 )
 
 export default Sitetitle

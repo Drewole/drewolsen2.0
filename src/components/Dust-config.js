@@ -1,7 +1,7 @@
 const dustConfig = {
     "particles": {
         "number": {
-            "value": 48,
+            "value": 60,
             "density": {
                 "enable": true,
                 "value_area": 1202.559045649142
@@ -26,7 +26,7 @@ const dustConfig = {
             }
         },
         "opacity": {
-            "value": 0.3084482200772,
+            "value": 0.4084482200772,
             "random": true,
             "anim": {
                 "enable": true,
@@ -36,7 +36,7 @@ const dustConfig = {
             }
         },
         "size": {
-            "value": 3,
+            "value": 4,
             "random": true,
             "anim": {
                 "enable": false,
@@ -82,9 +82,9 @@ const dustConfig = {
         },
         "modes": {
             "grab": {
-                "distance": 140,
+                "distance": 170,
                 "line_linked": {
-                    "opacity": 0.1
+                    "opacity": 0.2
                 }
             },
             "bubble": {

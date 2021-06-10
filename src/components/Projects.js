@@ -24,6 +24,7 @@ const Projects = () => {
                 gatsbyImageData(
 					placeholder: BLURRED
 					formats: [WEBP]
+					transformOptions: {fit: COVER cropFocus: NORTH}
 					width: 1400
 					height: 800
 				)
@@ -32,7 +33,7 @@ const Projects = () => {
             insideImg {
               childImageSharp {
                 gatsbyImageData(
-					placeholder: BLURRED
+					placeholder: DOMINANT_COLOR
 					formats: [WEBP]
 					)
               }
@@ -41,8 +42,9 @@ const Projects = () => {
               childImageSharp {
                 gatsbyImageData(
 					width: 800
-					placeholder: BLURRED
+					placeholder: DOMINANT_COLOR
 					formats: [WEBP]
+					transformOptions: {fit: COVER, cropFocus: NORTH}
 					)
               }
             }
