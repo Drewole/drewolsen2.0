@@ -56,16 +56,8 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`],
-
           quality: 90,
-          breakpoints: [750, 1080, 1366, 1920],
-          backgroundColor: `transparent`,
-          tracedSVGOptions: {},
-          blurredOptions: {},
-          jpgOptions: {},
-          pngOptions: {},
-          webpOptions: {},
-          avifOptions: {},
+          breakpoints: [380, 750, 1080, 1366, 1920],
         },
       },
     },

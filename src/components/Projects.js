@@ -22,28 +22,25 @@ const Projects = () => {
             frontImg {
               childImageSharp {
                 gatsbyImageData(
-					placeholder: BLURRED
-					formats: [WEBP]
+					placeholder: DOMINANT_COLOR
+					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER cropFocus: NORTH}
-					width: 1400
-					height: 800
+					aspectRatio: 16.9
 				)
               }
             }
             insideImg {
               childImageSharp {
                 gatsbyImageData(
-					placeholder: DOMINANT_COLOR
-					formats: [WEBP]
+					formats: [AUTO,WEBP]
 					)
               }
             }
             squareImg {
               childImageSharp {
                 gatsbyImageData(
-					width: 800
-					placeholder: DOMINANT_COLOR
-					formats: [WEBP]
+					aspectRatio: 1.1
+					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER, cropFocus: NORTH}
 					)
               }

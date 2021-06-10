@@ -2,7 +2,6 @@ import React from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
-import HeaderNav from '../components/HeaderNav';
 import Layout from '../layouts/Layout';
 
 const Contact = () => {
@@ -14,7 +13,7 @@ const Contact = () => {
                 <div className="row">
                     <h2>Hollar at Me</h2>
                     <p className="message">Shoot me a message and I will typically respond within one business day.</p>
-                    <form id='contact-form' noValidate>
+                    <form name="contact" method="POST" data-netlify="true" id='contact-form' noValidate>
                         {/* Row 1 of form */}
                         <div className='row formRow'>
                             <div className='col-6'>
@@ -58,7 +57,7 @@ const Contact = () => {
                         </div>
                         <button className='button' type='submit'>
                             Submit
-                </button>
+                        </button>
                     </form>
 
                 </div>
