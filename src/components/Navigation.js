@@ -4,43 +4,37 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import SiteLogo from "./SiteLogo"
 
-//Lets add the class to add shading to the nav when scrolling
-if (typeof window !== `undefined`) {
-  window.addEventListener("scroll", addNavBkg)
-}
+
+
+const Navigation = () => {
+
+  //Lets add the class to add shading to the nav when scrolling
+window.addEventListener("scroll", addNavBkg)
+
 
 function addNavBkg() {
+  
   const navBar = document.getElementById("nav-wrap")
   let windowWidth = window.innerWidth
   let scrollFromTop = window.scrollY
   if (windowWidth >= 768 && scrollFromTop >= 130) {
-    navBar.classList.add("scroll")
-  } else {
-    if (navBar.classList.contains("scroll")) {
-      navBar.classList.remove("scroll")
-    }
+    navBar.style.cssText += `background: rgba(33, 30, 50, 0.858);`
+  } else if (navBar.classList.contains("scroll")) {
+    navBar.style.removeProperty('background');
   }
+  // if (windowWidth >= 768 && scrollFromTop >= 130) {
+  //   navBar.classList.add("scroll")
+  // } else if (navBar.classList.contains("scroll")) {
+  //   navBar.classList.remove("scroll")
+  // }
 }
 
-const isCurrent = (anchor, pathname) =>
-  pathname.endsWith(anchor) ? "current" : ""
 
-class Navigation extends React.Component {
-  state = {
-    pathname: "#home",
-  }
-  componentDidMount() {
-    window.addEventListener("hashchange", () => {
-      this.setState({ pathname: window.location.href })
-    })
-  }
-  render() {
-    const { pathname = "" } = this.state
     return (
       <nav id="nav-wrap">
         <SiteLogo />
         <ul id="nav" className="nav">
-          <li className={isCurrent("#about", pathname)}>
+          <li className={"#about"}>
             <AnchorLink
               title="Go to the about me section"
               className="about"
@@ -52,7 +46,7 @@ class Navigation extends React.Component {
               About
             </AnchorLink>
           </li>
-          <li className={isCurrent("#portfolio", pathname)}>
+          <li className={"#portfolio"}>
             <AnchorLink
               title="Go to my portfolio"
               to="/#portfolio"
@@ -64,7 +58,7 @@ class Navigation extends React.Component {
               Portfolio
             </AnchorLink>
           </li>
-          <li className={isCurrent("#resume", pathname)}>
+          <li className={"#resume"}>
             <a
               title="Download my resume"
               className="resume"
@@ -79,8 +73,7 @@ class Navigation extends React.Component {
           </li>
         </ul>
       </nav>
-    )
-  }
+    );//End of return
 }
 
 export default Navigation
