@@ -22,7 +22,7 @@ const Projects = () => {
             frontImg {
               childImageSharp {
                 gatsbyImageData(
-					placeholder: DOMINANT_COLOR
+					placeholder: BLURRED
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER cropFocus: NORTH}
 					aspectRatio: 16.9
@@ -40,6 +40,7 @@ const Projects = () => {
               childImageSharp {
                 gatsbyImageData(
 					aspectRatio: 1.1
+					placeholder: BLURRED
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER, cropFocus: NORTH}
 					)

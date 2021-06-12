@@ -834,9 +834,7 @@ ul#nav {
 		color: $offWhite;
 		transition: all 200ms $transitionStyle;
 	}
-	.input-wrapper label.form-label:has(+ div) {
-		color: $coral;
-	}
+
 // TODO: Need to figure this out so the label moves upwards when the field is focused.
 	input:focus + label,
     input:not(:placeholder-shown) + label,
@@ -863,7 +861,68 @@ ul#nav {
 		text-transform: uppercase;
 		font-weight: 700;
 	}
+	button.reset {
+		background: none;
+		color: $coral;
+		font-size: 1.2rem;
+		margin-left: 15px;
+		border: none;
+		transition: color 200ms $transitionStyle;
+
+		&:hover {
+			cursor: pointer;
+			color: $offWhite;
+		}
+	}
 }
+
+/* 
+////// Toast base styles
+*/
+/** Classes for the displayed toast **/
+.Toastify__toast {
+}
+.Toastify__toast--rtl {
+}
+.Toastify__toast--dark {
+}
+.Toastify__toast--default {
+}
+.Toastify__toast--info {
+}
+.Toastify__toast--success {
+}
+.Toastify__toast--warning {
+}
+.Toastify__toast--error {
+}
+.Toastify__toast-body {
+}
+
+/** Classes for the close button. Better use your own closeButton **/
+.Toastify__close-button {
+}
+.Toastify__close-button--default {
+}
+.Toastify__close-button > svg {
+}
+.Toastify__close-button:hover, .Toastify__close-button:focus {
+}
+
+/** Classes for the progress bar **/
+.Toastify__progress-bar {
+}
+.Toastify__progress-bar--animated {
+}
+.Toastify__progress-bar--controlled {
+}
+.Toastify__progress-bar--rtl {
+}
+.Toastify__progress-bar--default {
+}
+.Toastify__progress-bar--dark {
+}
+
 /* 
 ////// Footer
 */

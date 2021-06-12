@@ -1,10 +1,15 @@
 import React from 'react'
-// import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useFormik } from 'formik'
 import * as Yup from 'yup';
 
 const Contact = () => {
+    const showToast = () => {
+        toast("Your submission has been sent!", {
+            position: toast.POSITION.BOTTOM_CENTER,
+        })
+    };
 
     const formik = useFormik({
 
@@ -27,27 +32,37 @@ const Contact = () => {
             message: Yup.string()
                 .required('Required'),
         }),
+
         onSubmit: (values, actions) => {
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact-me", ...values })
-            })
-                .then(() => {
-                    alert('Success');
-                    actions.resetForm()
-                })
-                .catch(() => {
-                    alert('Error');
-                })
-                .finally(() => actions.setSubmitting(false))
-        }
+            setTimeout(() => {
+                console.log(JSON.stringify(values, null, 2));
+                showToast();
+                actions.resetForm()
+                actions.setSubmitting(false);
+            }, 1000);
+
+        },
+        // handleSubmit: (values, actions) => {
+        //     fetch("/", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //         body: encode({ "form-name": "contact-me", ...values })
+        //     })
+        //     .then(() => {
+        //         showToast();
+        //         actions.resetForm();
+        //     })
+        //     .catch(() => {
+        //         alert('Error');
+        //     })
+        //     .finally(() => actions.setSubmitting(false))
+        // }
     });
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-    }
+    // const encode = (data) => {
+    //     return Object.keys(data)
+    //         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    //         .join("&");
+    // }
 
     return (
         <section id="contact">
@@ -117,15 +132,15 @@ const Contact = () => {
                         {formik.touched.message && formik.errors.message ? <div className="error">{formik.errors.message}</div> : null}
 
                     </div>
+                    <button className="button" type="submit">Send</button>
                     <button
-                        type="button"
-                        className="button outline"
+                        type="reset"
+                        className="reset"
                         onClick={formik.handleReset}
-                        disabled={!formik.dirty || formik.isSubmitting}
                     >
                         Reset
                     </button>
-                    <button className="button" type="submit">Send</button>
+                    <ToastContainer />
                 </form>
 
             </div>
