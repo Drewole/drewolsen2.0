@@ -55,6 +55,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	font-family: "Montserrat", sans-serif;
+	overflow-x: hidden;
 }
 a span {
 	padding-right: 3px;
@@ -789,9 +790,27 @@ ul#nav {
 		font-size: 5rem;
 	}
 	form {
-		width: 70%;
+		width: 60%;
 		margin: 25px auto;
 		
+	}
+	
+	.input-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 10px 0;
+	}
+	.input-wrapper label{
+		color: $offWhite;
+		margin: 0;
+		top: 0;
+	}
+	.input-wrapper div {
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $coral;
+
 	}
 	input, textarea {
 		width: 100%;
@@ -802,16 +821,30 @@ ul#nav {
 		color:$offWhite;
 		font-size: 1.6rem;
 		font-weight: 500;
-
+		border: 2px solid transparent;
+		
 		&:focus {
-			box-shadow: 0 2px 8px darken($purple, 15%);
+			border: 2px solid lighten($purple, 15%);
+			box-shadow: 0 2px 8px darken($purple, 10%);
 		}
-		&::placeholder {
-			color: $mutedWhite;
-			text-transform: uppercase;
-			font-weight: 500;
-		}
+
 	}
+	label.form-label, label.form-label {
+		transform: translate(0,0) !important;
+		color: $offWhite;
+		transition: all 200ms $transitionStyle;
+	}
+	.input-wrapper label.form-label:has(+ div) {
+		color: $coral;
+	}
+// TODO: Need to figure this out so the label moves upwards when the field is focused.
+	input:focus + label,
+    input:not(:placeholder-shown) + label,
+	textarea:focus +label,
+	textarea:not(:placeholder-shown) + label  {
+		// transform: translate(2rem, 4.5rem);
+		color: darken($offWhite, 25%);
+    }
 	.message {
 		font-size: 1.5rem;
 		color: $offWhite;
@@ -819,6 +852,11 @@ ul#nav {
 		text-align: center;
 		padding: 20px 20%;
 
+		span {
+			font-size: 1rem;
+			font-weight: bold;
+			color: $coral;
+		}
 	}
 	button {
 		margin: 0;
@@ -837,62 +875,65 @@ footer {
 	position: relative;
 	border-bottom: 8px solid darken($mutedCoral, 10%);
 	border-top: 4px solid lighten($aqua, 10%);
-}
 
-footer a,
-footer a:visited {
+	a,
+	a:visited {
 	color: darken($mutedCoral, 10%);
-}
-footer a:hover,
-footer a:focus {
+	}
+
+	a:hover,
+	a:focus {
 	color: #fff;
-}
-
-//// Copyright
-footer .copyright {
-	margin: 50px auto 0;
-	padding: 0;
-	line-height: 24px;
-	font-size: 13px;
-}
-footer .copyright li {
-	display: inline-block;
-	color: darken($mutedCoral, 15%);
-}
-.ie footer .copyright li {
-	display: inline;
-}
-footer .copyright li:before {
-	content: "\2022";
-	padding-left: 10px;
-	padding-right: 10px;
-	color: #dadada;
-}
-footer .copyright li:first-child:before {
-	display: none;
-}
-
-//// Social Links
-footer .social {
-	margin: 18px 0 30px 0;
-	padding: 0;
-	font-size: 30px;
-}
-footer .social li {
+	}
+	//// Copyright
+	.copyright {
+		margin: 50px auto 0;
+		padding: 0;
+		line-height: 24px;
+		font-size: 13px;
+	}
+	.copyright li {
+		display: inline-block;
+		color: darken($mutedCoral, 15%);
+	}
+	.ie footer .copyright li {
+		display: inline;
+	}
+	.copyright li:before {
+		content: "\2022";
+		padding-left: 10px;
+		padding-right: 10px;
+		color: #dadada;
+	}
+	.copyright li:first-child:before {
+		display: none;
+	}
+	//// Social Links
+	.social {
+		margin: 18px 0 30px 0;
+		padding: 0;
+		font-size: 30px;
+	}
+	.social li {
 	display: inline-block;
 	font-size: 30px;
 	margin: 0;
 	padding: 0;
 	margin-left: 42px;
-}
-footer .social svg {
+	}
+	.social svg {
 	color: darken($mutedCoral, 10%);
-}
+	}
 
-footer .social li:first-child {
+	.social li:first-child {
 	margin-left: 0;
+	}
+	.cheatcode {
+	color: $offWhite;
+	font-weight: 700;
+	font-size: .9rem;
+	}
 }
-
 //// To Top Btn
 #go-top {
 	position: absolute;

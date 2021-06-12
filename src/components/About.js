@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import { MdDescription } from 'react-icons/md';
 import { siteMetadata } from '../../gatsby-config';
 import ProfilePic from './ProfilePic';
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const availabilityText = siteMetadata.available === true ? 'available!' : 'unavailable :(';
 const available = siteMetadata.available === true ? 'available' : '';
@@ -23,13 +23,13 @@ const About = () => (
 				</p>
 				<p>
 					My start in Web Development began ten years ago and I have strived to be on the cutting edge of the
-					new web technologies ever since. Because of this, <span className="bold">I recently graduated from an intense 12 - week boot camp to level up my back-end skills.</span> This is a constant practice so I can improve the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
+					new web technologies ever since. Because of this, <span className="bold">I recently graduated from an intense, 12-week boot camp to level up my back-end skills.</span> This is a regular practice so I can improve the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
 				</p>
 				<p>
 					Have a project you might want my help with?
-					<a className="form-link" href="https://forms.gle/s9VwLkV3KA4xjcmk6">
+					<AnchorLink className="form-link" to="/#contact" >
 						Let's chat.
-					</a>
+					</AnchorLink>
 
 				</p>
 
@@ -65,12 +65,12 @@ const About = () => (
 
 					</div>
 					<div className="columns download">
-						<Link to="/contact" className="button">
+						<AnchorLink to="/#contact" className="button">
 							<span>
 								<MdDescription />
 							</span>
 							Contact Me
-						</Link>
+						</AnchorLink>
 
 					</div>
 				</div>

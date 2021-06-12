@@ -19,8 +19,8 @@ function addNavBkg() {
   let scrollFromTop = window.scrollY
   if (windowWidth >= 768 && scrollFromTop >= 130) {
     navBar.style.cssText += `background: rgba(33, 30, 50, 0.858);`
-  } else if (navBar.classList.contains("scroll")) {
-    navBar.style.removeProperty('background');
+  } else if (navBar.hasAttribute("background")) {
+    navBar.style.cssText += `background: rgba(33, 30, 50, 0);`
   }
   // if (windowWidth >= 768 && scrollFromTop >= 130) {
   //   navBar.classList.add("scroll")
