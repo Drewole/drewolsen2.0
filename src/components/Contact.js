@@ -8,6 +8,8 @@ const Contact = () => {
     const showToast = () => {
         toast("Your submission has been sent!", {
             position: toast.POSITION.BOTTOM_CENTER,
+            // autoClose: false,
+            draggablePercent: 60
         })
     };
 
@@ -67,7 +69,7 @@ const Contact = () => {
     return (
         <section id="contact">
             <div className="row">
-                <h2>Hollar at Me</h2>
+                <h2>What's Up?</h2>
                 <p className="message">Shoot me a message and I will typically respond within one business day.<br />
                     <span>(All fields required BTW)</span>
                 </p>

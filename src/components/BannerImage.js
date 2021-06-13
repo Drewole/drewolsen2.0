@@ -32,11 +32,10 @@ const BannerImage = () => {
 			backgroundColor={`#040e18`}
 		>
 			<Dust />
-			<h1 className="responsive-headline">Full-Stack Web Developer</h1>
+			<h1 className="responsive-headline">Full-Stack Developer</h1>
 			<h3>
-				A Multi-faceted Web Developer with a knack for effectively conceptualizing and
-				delivering elegant, user-friendly solutions.
-								<br />
+				A Multi-faceted Web Developer with a knack for effectively conceptualizing and delivering elegant, user-friendly solutions.
+				<br />
 
 			</h3>
 			<AnchorLink className="btn" title="View my portfolio" to="/#portfolio">

@@ -19,11 +19,11 @@ const About = () => (
 			<div className="nine columns main-col">
 				<h2>About Me</h2>
 				<p>
-					I am a Front-End Web Developer with around ten years of experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
+					My name is Drew, and I am a Full-Stack Web Developer with around ten years of experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
 				</p>
 				<p>
 					My start in Web Development began ten years ago and I have strived to be on the cutting edge of the
-					new web technologies ever since. Because of this, <span className="bold">I recently graduated from an intense, 12-week boot camp to level up my back-end skills.</span> This is a regular practice so I can improve the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
+					new web technologies ever since. Because of this, <span className="bold">I recently graduated from an intense, 12-week boot camp to level up my back-end skills.</span> I am constantly learning so I can improve the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
 				</p>
 				<p>
 					Have a project you might want my help with?
@@ -35,11 +35,10 @@ const About = () => (
 
 				<h3>My skills include but are not limited to:</h3>
 				<p className="small">
-					HTML5 - SCSS - CSS3 - Responsive Design - JS - React.js - Express.js - MongoDB - MySQL - Node.js - Gatsby - Sketch - Figma - Adobe Suite - Netlify - Webpack - Docker - Git - Gulp
+					HTML5 - SCSS - CSS3- Git - JavaScript - React.js - Express.js - Node.js - Gatsby - MongoDB - MySQL - Sketch - Figma - Adobe Suite - Responsive Design
 				</p>
 				<div className="row">
 					<div className="columns contact-details">
-
 						<h2>Contact Details</h2>
 						<h4>Drew Olsen</h4>
 						<p className="address">
@@ -55,22 +54,21 @@ const About = () => (
 								</span>
 								952.381.5559
 							</a>
-							<a className="form-link" href="https://forms.gle/s9VwLkV3KA4xjcmk6">
+							<AnchorLink className="form-link" href="/#contact">
 								<span>
 									<FaEnvelope />
 								</span>
 								Contact Me
-							</a>
+							</AnchorLink>
 						</p>
-
 					</div>
 					<div className="columns download">
-						<AnchorLink to="/#contact" className="button">
+						<a href="https://drive.google.com/file/d/1i8chX2JYvaPvsJd__pZwLBONGygN0sDs/view?usp=sharing" className="button">
 							<span>
 								<MdDescription />
 							</span>
-							Contact Me
-						</AnchorLink>
+							Download Resume
+						</a>
 
 					</div>
 				</div>
