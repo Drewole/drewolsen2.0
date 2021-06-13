@@ -1107,14 +1107,15 @@ footer {
 				color: $aqua;
 			}
 			.portfolio span,
-			.about span {
+			.about span,
+			.contact span {
 				color: $mutedCoral;
 				left: 37%;
 			}
 			.portfolio span {
 				left: 39%;
 			}
-			.resume span {
+			.contact span {
 				left: 39%;
 			}
 		}
@@ -1376,7 +1377,7 @@ footer .copyright {
 				.portfolio span {
 					left: 33%;
 				}
-				.resume span {
+				.contact span {
 					left: 27%;
 				}
 			}

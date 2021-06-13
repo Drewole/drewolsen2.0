@@ -26,6 +26,8 @@ const Projects = () => {
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER cropFocus: NORTH}
 					aspectRatio: 16.9
+					width: 1400
+					height: 800
 				)
               }
             }
