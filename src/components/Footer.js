@@ -25,7 +25,7 @@ const Footer = () => (
         <FaChevronCircleUp />
       </AnchorLink>
     </div>
-    <p className="cheatcode"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">↑ ↑ ↓ ↓ ← → ← → a b b a</a></p>
+    <p className="cheatcode"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">↑ ↑ ↓ ↓ ← → ← → b a select start</a></p>
   </footer>
 )
 

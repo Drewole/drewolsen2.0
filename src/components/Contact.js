@@ -11,6 +11,11 @@ const Contact = () => {
             // autoClose: false,
             draggablePercent: 60
         })
+        toast.error("Please check your submission for errors.", {
+            position: toast.POSITION.BOTTOM_CENTER,
+            // autoClose: false,
+            draggablePercent: 60
+        })
     };
 
     const formik = useFormik({

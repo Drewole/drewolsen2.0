@@ -54,7 +54,7 @@ const About = () => (
 								</span>
 								952.381.5559
 							</a>
-							<AnchorLink className="form-link" href="/#contact">
+							<AnchorLink className="form-link" to="/#contact">
 								<span>
 									<FaEnvelope />
 								</span>

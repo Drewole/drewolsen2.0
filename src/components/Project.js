@@ -1,15 +1,30 @@
 import React from "react"
-import { FaPlus, FaTag, FaTimes, FaGithub } from "react-icons/fa"
+import { FaPlus } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from 'gatsby'
 
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
-  const mainImage = getImage(props.frontImg)
+
+  // function randomRotate() {
+  //   let rand = (min, max) => Math.floor(Math.random() * (max - min)) + min
+  //   let randomNum = rand(- 100, 100) / 100
+  //   return randomNum
+  // }
+  // function setRotate() {
+  //   document.documentElement.style
+  //     .setProperty('--rotation', randomRotate());
+  // }
+  // function resetRotate() {
+  //   document.documentElement.style
+  //     .setProperty('--rotation', '0')
+  // }
+
   return (
     <>
       <div className="portfolio-item">
-        <div className="item-wrap">
-          <a href={`#modal-${props.slug}`}>
+        <div className="item-wrap" >
+          <Link props={props} to={`/projects/${props.slug}`}>
             <GatsbyImage image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
@@ -22,38 +37,7 @@ const Project = (props) => {
             <div className="link-icon">
               <FaPlus />
             </div>
-          </a>
-        </div>
-      </div>
-      <div className="popup-modal-shadow">
-        <div id={`modal-${props.slug}`} className="popup-modal mfp-hide">
-          <GatsbyImage image={mainImage} alt={props.title} />
-          <div className="description-box">
-            <h4>{props.title}</h4>
-            <p>{props.longDescription}</p>
-            <span className="categories">
-              <FaTag /> <span>{props.tags}</span>
-            </span>
-          </div>
-
-          <div className="link-box">
-            {props.extSite && (
-              <a className="btn" href={`${props.extSite}`}>
-                View Site
-              </a>
-            )}
-
-            <a href="#portfolio" className="btn popup-modal-dismiss">
-              Close
-            </a>
-            {props.github && (
-              <p className="github"><a href={`https://github.com${props.github}`}>View on <span>Github <FaGithub /></span></a></p>
-            )}
-
-          </div>
-          <a href="#portfolio" className="popup-modal-close">
-            <FaTimes />
-          </a>
+          </Link>
         </div>
       </div>
     </>

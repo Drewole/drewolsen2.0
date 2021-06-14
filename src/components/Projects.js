@@ -25,9 +25,8 @@ const Projects = () => {
 					placeholder: BLURRED
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER cropFocus: NORTH}
-					aspectRatio: 16.9
 					width: 1400
-					height: 800
+					height: 750
 				)
               }
             }

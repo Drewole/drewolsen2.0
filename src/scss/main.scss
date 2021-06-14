@@ -45,6 +45,9 @@ $outside-link: $aqua;
 /* 
 ////// General Styles
 */
+:root {
+	--rotation: -1deg;
+}
 .bold {
 	font-weight: 700;
 }
@@ -264,6 +267,7 @@ header {
 #nav-wrap {
 	font: 12px "Montserrat", sans-serif;
 	width: 100%;
+	max-height: 100px;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2.5px;
@@ -509,6 +513,7 @@ ul#nav {
 		max-width: 29%;
 		margin: 2%;
 		min-width: 150px;
+		
 		.portfolio-item-meta {
 			padding: 18px;
 			max-width: 100%;
@@ -552,16 +557,13 @@ ul#nav {
 			}
 		}
 		.item-wrap {
-			--rotation: -1deg;
 			overflow: hidden;
 			position: relative;
-			transform: scale(1);
 			box-shadow: 0px 14px 13px -8px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
 			transition: all 0.2s $transitionStyle;;
 			border-radius: 5px;
-
 			&:hover {
-				transform: rotate(var(--rotation)) scale(1.03); //TODO Use javascript to add a random number to the rotate https://css-tricks.com/random-numbers-css/
+				transform: rotate(var(--rotation));
 				border-radius: 7px;
 				box-shadow:
 					0 2.1px 2.2px -2px rgba(0, 0, 0, 0.048),
@@ -634,18 +636,28 @@ ul#nav {
 /* 
 ////// Popup Modal
 */
-.popup-modal-shadow {}
+.popup-modal-shadow {
+	background: rgba(darken($purple, 6%), 0.85);
+	position: relative;
+	display: none;
+	width: 100vw;
+	height: 0;
+	z-index: 98;
+
+	.open {
+		height: 100%;
+	}
+}
+
 .popup-modal {
 	width: 100%;
 	background: #f5f5f5;
 	border-radius: 30px;
 	overflow: hidden;
-	top: 50px;
+	position: relative;
 	padding-bottom: 45px;
-	box-shadow: 0 0 0 2000px rgba(darken($purple, 6%), 0.85), 0 30px 60px rgba(0, 0, 0, 0.6);
-	position: fixed;
 	margin: 0 auto;
-	z-index: 99999;
+	z-index: 99;
 	opacity: 0;
 	transition: all 0.2s $transitionStyle;;
 	pointer-events: none;
@@ -773,7 +785,7 @@ ul#nav {
 	}
 }
 /* 
-////// Contact Page
+////// Contact Section
 */
 
 #contact {
@@ -883,48 +895,13 @@ ul#nav {
 		font-weight: bold;
 		font-family: "Montserrat", sans-serif;
 	}
-	.Toastify__toast--rtl {
-	}
-	.Toastify__toast--dark {
-	}
 	.Toastify__toast--default {
 		background: $aqua;
 		border: 2px solid darken($aqua, 5%);
 	}
-	.Toastify__toast--info {
-	}
-	.Toastify__toast--success {
-	}
-	.Toastify__toast--warning {
-	}
-	.Toastify__toast--error {
-	}
-	.Toastify__toast-body {
-	}
-
-	/** Classes for the close button. Better use your own closeButton **/
-	.Toastify__close-button {
-	}
-	.Toastify__close-button--default {
-	}
-	.Toastify__close-button > svg {
-	}
-	.Toastify__close-button:hover, .Toastify__close-button:focus {
-	}
-
 	/** Classes for the progress bar **/
 	.Toastify__progress-bar {
 		background: $purple;
-	}
-	.Toastify__progress-bar--animated {
-	}
-	.Toastify__progress-bar--controlled {
-	}
-	.Toastify__progress-bar--rtl {
-	}
-	.Toastify__progress-bar--default {
-	}
-	.Toastify__progress-bar--dark {
 	}
 }
 
