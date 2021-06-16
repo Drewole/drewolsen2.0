@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Project from './Project';
+import ProjectPreview from './ProjectPreview';
 
 const Projects = () => {
 
@@ -72,7 +72,7 @@ const Projects = () => {
 					const squareImg = project.squareImg;
 					const frontImg = project.frontImg;
 					return (
-						<Project
+						<ProjectPreview
 							key={id}
 							id={id}
 							title={title}

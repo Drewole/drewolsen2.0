@@ -1,12 +1,14 @@
 import React from 'react';
-import Navigation from './Navigation';
 import BannerImage from './BannerImage';
 
 const Hero = () => (
 	<header id="home">
 		<div id="dust">
-			<Navigation />
-			<BannerImage />
+			<BannerImage
+				title={"Full-Stack Developer"}
+				link={"/#portfolio"}
+				backgroundImage={"image.jpg"}
+			/>
 		</div>
 	</header>
 );
