@@ -152,106 +152,110 @@ header {
 		}
 	}
 }
-	.hero-bkg {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-size: cover;
-		padding: 40px 0 60px;
+#dust {
+	margin-top: -10px;
+}
+.hero-bkg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	padding: 40px 0 60px;
+}
+.banner-text {
+	width: 100%;
+	padding: 200px 0;
+	text-align: center;
+	hr {
+		width: 60%;
+		margin: 0 auto;
+		border: none;
+		border-bottom: solid 1px rgba($aqua, 0.9);
 	}
-	.banner-text {
-		width: 100%;
-		padding: 200px 0;
-		hr {
-			width: 60%;
-			margin: 0 auto;
-			border: none;
-			border-bottom: solid 1px rgba($aqua, 0.9);
-		}
-		h1 {
-			font: 800 90px/1.1em "Montserrat", sans-serif;
-			color: #fff;
-			letter-spacing: -1px;
-			margin: 0 auto 18px auto;
-			text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
-			pointer-events: none;
-			-webkit-user-select: none; /* Safari */        
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* IE10+/Edge */
-			user-select: none; /* Standard */
+	h1 {
+		font: 800 90px/1.1em "Montserrat", sans-serif;
+		color: #fff;
+		letter-spacing: -1px;
+		margin: 0 auto 18px auto;
+		text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+		pointer-events: none;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
 
-		}
-		h3 {
-			font: 24px/1.5em "Montserrat", serif;
+	}
+	h3 {
+		font: 24px/1.5em "Montserrat", serif;
+		color: #fff;
+		font-weight: 400;
+		margin: 0 auto;
+		max-width: 62vw;
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+		pointer-events: none;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+
+		span {
 			color: #fff;
-			font-weight: 400;
-			margin: 0 auto;
-			max-width: 62vw;
-			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-			pointer-events: none;
-			-webkit-user-select: none; /* Safari */        
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* IE10+/Edge */
-			user-select: none; /* Standard */
+		}
+		
+	}
+	a.btn {
+			font: 16px/1.5em "Montserrat", serif;
+			color: #fff;
+			font-weight: 700;
+			display: inline-block;
+			border-radius: 4px;
+			padding: 15px 20px;
+			margin: 30px 0;
+			transition: all 0.2s $transitionStyle;
+			border: 2px solid rgba(lighten($brightCoral, 5%), 0.7);
 
 			span {
-				color: #fff;
+				transition: all 0.1s $transitionStyle;
 			}
-			
-		}
-		a.btn {
-				font: 16px/1.5em "Montserrat", serif;
-				color: #fff;
-				font-weight: 700;
-				display: inline-block;
-				border-radius: 4px;
-				padding: 15px 20px;
-				margin: 30px 0;
-				transition: all 0.2s $transitionStyle;
-				border: 2px solid rgba(lighten($brightCoral, 5%), 0.7);
+
+			&:hover {
+				color: darken($purple, 10%);
+				padding: 15px 35px;
+				text-shadow: 0 0px 2px rgba(lighten($brightCoral, 7%), 0.89),
+					0 0px 5px rgba(lighten($brightCoral, 7%), 0.89);
+				background-color: rgba(lighten($brightCoral, 5%), 1);
+				box-shadow: 0 0 10px rgba($brightCoral, 1), 0 0 40px rgba($brightCoral, 1),
+					0 0 80px rgba($brightCoral, 1);
 
 				span {
-					transition: all 0.1s $transitionStyle;
-				}
-
-				&:hover {
 					color: darken($purple, 10%);
-					padding: 15px 35px;
-					text-shadow: 0 0px 2px rgba(lighten($brightCoral, 7%), 0.89),
-						0 0px 5px rgba(lighten($brightCoral, 7%), 0.89);
-					background-color: rgba(lighten($brightCoral, 5%), 1);
-					box-shadow: 0 0 10px rgba($brightCoral, 1), 0 0 40px rgba($brightCoral, 1),
-						0 0 80px rgba($brightCoral, 1);
-
-					span {
-						color: darken($purple, 10%);
-						padding-left: 6px;
-					}
-				}
-			}
-		//// Header Social Links
-		.social {
-			margin: 30px 0;
-			padding: 0;
-			font-size: 30px;
-			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
-
-			li {
-				display: inline-block;
-				margin: 0 15px;
-				padding: 0;
-
-				a {
-					color: #fff;
-
-					&:hover {
-						color: #11abb0;
-					}
+					padding-left: 6px;
 				}
 			}
 		}
+	//// Header Social Links
+	.social {
+		margin: 30px 0;
+		padding: 0;
+		font-size: 30px;
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
 
+		li {
+			display: inline-block;
+			margin: 0 15px;
+			padding: 0;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					color: #11abb0;
+				}
+			}
+		}
 	}
+
+}
 	
 @media only screen and (max-width: 1024px) {
 	header .banner-text h1 {
@@ -375,6 +379,7 @@ ul#nav {
 		color: #44a69d;
 		font: 15px/17px "Montserrat", sans-serif;
 		margin-bottom: 2px;
+		font-weight: 600;
 		text-transform: uppercase;
 	}
 

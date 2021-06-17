@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import ProjectPreview from './ProjectPreview';
 
-const Projects = () => {
+const ProjectsGallery = () => {
 
 	const data = useStaticQuery(graphql`
     {
@@ -93,4 +93,4 @@ const Projects = () => {
 		</section>
 	);
 };
-export default Projects;
+export default ProjectsGallery;

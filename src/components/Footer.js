@@ -4,14 +4,14 @@ import { FaChevronCircleUp } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Footer = () => {
-  let year = new Date().getFullYear;
+  let year = new Date().getFullYear();
   console.log(year)
   return (
     <footer id="footer">
       <SocialLinks />
 
       <ul className="copyright">
-        <li>&copy; Copyright {year} <span className="bold" >DrewOlsen.Design</span></li>
+        <li>&copy; Copyright {year} <span className="bold" > DrewOlsen.Design</span></li>
       </ul>
 
       <div id="go-top">
