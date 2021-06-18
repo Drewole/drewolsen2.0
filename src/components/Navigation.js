@@ -6,20 +6,6 @@ import SiteLogo from "./SiteLogo"
 
 const Navigation = () => {
 
-  function addNavBkg() {
-
-    const navBar = document.getElementById("nav-wrap")
-    let windowWidth = window.innerWidth
-    let scrollFromTop = window.scrollY
-    if (windowWidth >= 768 && scrollFromTop >= 130) {
-      navBar.style.cssText += `background: rgba(33, 30, 50, 0.858);`
-    } else if (navBar.hasAttribute("background")) {
-      navBar.style.cssText += `background: rgba(33, 30, 50, 0);`
-    }
-  }
-  //Lets add the class to add shading to the nav when scrolling
-  window.addEventListener("scroll", addNavBkg)
-
   return (
     <nav id="nav-wrap">
       <SiteLogo />

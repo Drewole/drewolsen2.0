@@ -33,6 +33,7 @@ const ProjectsGallery = () => {
             insideImg {
               childImageSharp {
                 gatsbyImageData(
+					outputPixelDensities: 1.5
 					formats: [AUTO,WEBP]
 					)
               }
@@ -40,7 +41,9 @@ const ProjectsGallery = () => {
             squareImg {
               childImageSharp {
                 gatsbyImageData(
-					aspectRatio: 1.1
+					outputPixelDensities: 1.5
+					breakpoints: [200, 400, 800]
+					layout: CONSTRAINED
 					placeholder: BLURRED
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER, cropFocus: NORTH}

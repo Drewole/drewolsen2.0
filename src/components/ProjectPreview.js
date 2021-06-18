@@ -25,7 +25,7 @@ const Project = (props) => {
       <div className="portfolio-item">
         <div className="item-wrap" >
           <Link props={props} to={`/projects/${props.slug}`}>
-            <GatsbyImage image={thumbImage} alt={props.title} />
+            <GatsbyImage aspectRatio={1 / 1} image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{props.title}</h5>

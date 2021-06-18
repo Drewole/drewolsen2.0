@@ -49,7 +49,7 @@ $outside-link: $aqua;
 	--rotation: -1deg;
 }
 .bold {
-	font-weight: 700;
+	font-weight: 800;
 }
 body {
 	background: darken($purple, 4%);
@@ -59,6 +59,7 @@ body {
 	text-rendering: optimizeLegibility;
 	font-family: "Montserrat", sans-serif;
 	overflow-x: hidden;
+	font-weight: 500;
 }
 a span {
 	padding-right: 3px;
@@ -97,7 +98,7 @@ a span {
 .instagram {
 	font-size: 32px;
 	svg {
-		transition: all 0.2s $transitionStyle;
+		transition: all 200ms $transitionStyle;
 	}
 }
 .github svg:hover {
@@ -118,10 +119,12 @@ a span {
 */
 
 header {
-	position: relative;
+	position: fixed;
 	background-color: lighten($purple, 5%);
 	border-bottom: 10px solid lighten($purple, 5%);
 	width: 100%;
+	min-height: 50px;
+	z-index: 5;
 	text-align: center;
 	overflow: hidden;
 	
@@ -281,7 +284,7 @@ header {
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: rgba(49, 46, 65, 0);
+	background: rgba(39, 37, 53, 0.8);
 	transition: all 0.3s $transitionStyle;
 	//// Adds background after scrolling w/ some JS
 	&.scroll {
@@ -333,6 +336,46 @@ ul#nav {
 }
 
 /* 
+////// Typography
+*/
+	h1 {
+		font: 44px/60px "Montserrat", sans-serif;
+		color: #fff;
+		font-weight: bold;
+		margin-bottom: 12px;
+	}
+	h2 {
+		font: 22px/30px "Montserrat", sans-serif;
+		color: #fff;
+		font-weight: bold;
+		margin-bottom: 12px;
+	}
+
+	h3 {
+		color: $coral;
+		font: 22px/30px "Montserrat", sans-serif;
+	}
+
+	h4 {
+		color: #44a69d;
+		font: 15px/17px "Montserrat", sans-serif;
+		margin-bottom: 2px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	p {
+		line-height: 30px;
+		font-size: 1.2em;
+		color: darken($offWhite, 10%);
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+		&.small {
+			font-size: .9em;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+/* 
 ////// About Section
 */
 
@@ -362,39 +405,10 @@ ul#nav {
 			}
 		}
 	}
-
-	h2 {
-		font: 22px/30px "Montserrat", sans-serif;
-		color: #fff;
-		font-weight: bold;
-		margin-bottom: 12px;
+	.bold {
+		color: lighten
 	}
-
-	h3 {
-		color: $coral;
-		font: 22px/30px "Montserrat", sans-serif;
-	}
-
-	h4 {
-		color: #44a69d;
-		font: 15px/17px "Montserrat", sans-serif;
-		margin-bottom: 2px;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-
-	p {
-		line-height: 30px;
-		font-size: 1.2em;
-		color: #cdcdcd;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-		&.small {
-			font-size: .9em;
-			text-transform: uppercase;
-			font-weight: 700;
-		}
-	}
-
+	
 	.address {
 		line-height: 20px;
 		margin-bottom: 5px;
@@ -492,7 +506,7 @@ ul#nav {
 }
 
 /* 
-////// Portfolio Section
+////// Projects Gallery Section
 */
 
 #portfolio {
@@ -569,7 +583,6 @@ ul#nav {
 			transition: all 0.2s $transitionStyle;;
 			border-radius: 5px;
 			&:hover {
-				transform: rotate(var(--rotation));
 				border-radius: 7px;
 				box-shadow:
 					0 2.1px 2.2px -2px rgba(0, 0, 0, 0.048),
@@ -643,114 +656,102 @@ ul#nav {
 ////// Single Project Page
 */
 
-.single-project {
-	width: 100%;
-	background: #f5f5f5;
-	border-radius: 30px;
-	overflow: hidden;
-	position: relative;
+.project-single{
 	padding-bottom: 45px;
 	margin: 0 auto;
-	z-index: 99;
-	opacity: 0;
-	transition: all 0.2s $transitionStyle;;
-	pointer-events: none;
+	transition: all 0.2s $transitionStyle;
 
 	img {
 		border-bottom: 10px solid darken($offWhite, 25%);
 	}
-
-	.description-box {
-		padding: 50px 10%;
-		background: none;
-
-		h4 {
-			font: 15px/24px "Montserrat", sans-serif;
-			font-weight: bold;
-			margin-bottom: 12px;
-			color: $purple;
-		}
-		p {
-			font: 14px/24px "Montserrat", sans-serif;
-			color: darken($gray, 5%);
-			margin-bottom: 12px;
-		}
-		.categories {
-			font: 10px/21px "Montserrat", sans-serif;
-			font-weight: bold;
-			color: darken($offWhite, 30%);
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			display: block;
-			text-align: left;
-			svg {
-				margin: 3px 8px 0 0;
-				fill: darken($offWhite, 25%);
-			}
-		}
+	.flex-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
 	}
-	.back-to-projects {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		padding: 12px 12px 4px;
-		border-radius: 50%;
-		color: white;
+	h4 {
+		font: 18px/24px "Montserrat", sans-serif;
+		font-weight: bold;
+		margin-bottom: 12px;
+		color: $aqua;
+	}
+	p {
+		font: 16px/24px "Montserrat", sans-serif;
+		color: $offWhite;
+		font-weight: 500;
+		margin-bottom: 12px;
+	}
+	.tags {
+		font: 10px/21px "Montserrat", sans-serif;
+		font-weight: bold;
+		color: darken($offWhite, 7%);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: block;
+		text-align: left;
 		svg {
-			height: 25px;
-			width: 25px;
-		}
-		&:hover {
-			color: $coral;
+			margin: 3px 8px 0 0;
+			fill: darken($offWhite, 25%);
 		}
 	}
+	.text-content {
+		padding: 4%;
+		flex-basis: 70%;
+	}
+
 	.link-box {
-		position: relative;
+		display: flex;
+		flex-wrap: wrap;
 		background: none;
-		padding: 25px 10%;
+		padding: 75px 10%;
+		justify-content: space-around;
+		align-items: center;
 		.github {
 			text-align: center;
-			opacity: 1;
+			margin-top: 30px;
+			flex-basis: 100%;
+			font-weight: 600;
 			clear: both;
 				a {
-				font-size: 1rem;
+				font-size: 1.3rem;
+				font-weight: 400;
 				text-transform: uppercase;
-				color: lighten($gray, 10%);
+				color: darken($offWhite, 5%);
 				text-align: center;
-				
-				transition: opacity .2s $transitionStyle;
+				letter-spacing: 0;
+				opacity: 1;
+				transition: opacity 300ms $transitionStyle;
 
 					span {
 						font-weight: bold;
-						color: $gray;
+						color: $offWhite;
 
 					}
 					&:visited {
-						color: lighten($gray, 10%);
+						color: darken($offWhite, 5%);
 					}
-				}
-				&:hover {
+					&:hover {
 					opacity: .7;
+					letter-spacing: 3;
 				}
+				}
+				
 		}
 		a.btn {
-			color: #fff;
-			font: 11px/21px "Montserrat", sans-serif;
+			font: 12px/21px "Montserrat", sans-serif;
 			font-weight: bold;
 			text-transform: uppercase;
 			border-radius: 3px;
-			color: $purple;
+			color: $offWhite;
 			text-align: center;
-			float: left;
 			letter-spacing: 3px;
-			background-image: linear-gradient(to right, $aqua, $aqua 51%, $offWhite 49%);
+			background-image: linear-gradient(to right, $aqua, $aqua 51%, $purple 49%);
 			background-size: 200% 100%;
 			background-position: 100%;
 			cursor: pointer;
 			padding: 15px 30px;
 			width: 49%;
 			border: 2px solid $aqua;
-			transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+			transition: all 300ms $transitionStyle;
 			&:nth-child(2) {
 				margin-left: 2%;
 			}
@@ -758,18 +759,21 @@ ul#nav {
 			&:hover {
 				background-position: 0%;
 				color: $offWhite;
+				border-radius: 6px;
 			}
-			&.popup-modal-dismiss {
+			&.back-to-projects {
 				display: block;
-				background-image: linear-gradient(to left, $coral, $coral 51%, $offWhite 49%);
+				color: $offWhite;
+				background-image: linear-gradient(to left, $coral, $coral 51%, $purple 49%);
 				background-position: 0%;
 				border-color: $coral;
 				&:hover {
-					color: $offWhite;
 					background-position: 99%;
 				}
 			}
+		
 		}
+		
 	}
 
 	&:target {
@@ -823,7 +827,7 @@ ul#nav {
 		background-color: lighten($purple, 5%);
 		border-radius: 3px;
 		font-family: "Montserrat", sans-serif;
-		transition: all 200ms $transitionStyle;
+		transition: all 300ms $transitionStyle;
 		color:$offWhite;
 		font-size: 1.6rem;
 		font-weight: 500;
@@ -838,7 +842,7 @@ ul#nav {
 	label.form-label, label.form-label {
 		transform: translate(0,0) !important;
 		color: $offWhite;
-		transition: all 200ms $transitionStyle;
+		transition: all 300ms $transitionStyle;
 	}
 
 // TODO: Need to figure this out so the label moves upwards when the field is focused.
@@ -873,7 +877,7 @@ ul#nav {
 		font-size: 1.2rem;
 		margin-left: 15px;
 		border: none;
-		transition: color 200ms $transitionStyle;
+		transition: color 300ms $transitionStyle;
 
 		&:hover {
 			cursor: pointer;
