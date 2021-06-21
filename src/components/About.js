@@ -13,7 +13,7 @@ const About = () => (
 			<div className="three columns pic">
 				<ProfilePic />
 				<p className={available}>
-					Have a Project? I'm <span>{availabilityText}</span>
+					Have a Project? Looking to hire? <br /> I'm <span>{availabilityText}</span>
 				</p>
 			</div>
 			<div className="nine columns main-col">

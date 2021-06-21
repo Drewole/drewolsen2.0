@@ -16,21 +16,42 @@ export const query = graphql`
             github
             extSite
             frontImg {
-                childImageSharp {
-                    gatsbyImageData(outputPixelDensities: 1.5, quality: 90)
-                }
+              childImageSharp {
+                gatsbyImageData(
+                    placeholder: BLURRED
+                    formats: [AUTO,WEBP]
+                    layout: FULL_WIDTH
+                    transformOptions: {fit: COVER cropFocus: NORTH}
+                    width: 1400
+                    height: 750
+                )
+              }
             }
             insideImg {
-                childImageSharp {
-                    gatsbyImageData(outputPixelDensities: 1.5, quality: 90)
-                }
+              childImageSharp {
+                gatsbyImageData(
+                    formats: [AUTO, WEBP]
+                    transformOptions: {fit: COVER cropFocus: NORTH}
+                    width: 800
+                    height:800
+                )
+              }
+            }
+           	mobileImg {
+				childImageSharp {
+                    gatsbyImageData(
+                    formats: [AUTO, WEBP]
+                    transformOptions: {fit: COVER cropFocus: NORTH}
+                    width: 800
+                    height:800
+                    )
+              }
             }
         }
     }
 `
 const ProjectLayout = ({ data }) => {
     const project = data.projectsJson;
-    // const mainImage = getImage(project.frontImage.childImageSharp.gatsbyImageData)
     return (
         <Layout>
             <Project
@@ -42,6 +63,10 @@ const ProjectLayout = ({ data }) => {
                 tags={project.tags}
                 github={project.github}
                 extSite={project.extSite}
+                frontImg={project.frontImg}
+                insideImg={project.insideImg}
+                mobileImg={project.mobileImg}
+
             />
             <Footer />
         </Layout>

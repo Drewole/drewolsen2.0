@@ -11,21 +11,13 @@ const Project = (props) => {
   //   let randomNum = rand(- 100, 100) / 100
   //   return randomNum
   // }
-  // function setRotate() {
-  //   document.documentElement.style
-  //     .setProperty('--rotation', randomRotate());
-  // }
-  // function resetRotate() {
-  //   document.documentElement.style
-  //     .setProperty('--rotation', '0')
-  // }
 
   return (
     <>
       <div className="portfolio-item">
         <div className="item-wrap" >
-          <Link props={props} to={`/projects/${props.slug}`}>
-            <GatsbyImage aspectRatio={1 / 1} image={thumbImage} alt={props.title} />
+          <Link to={`/projects/${props.slug}`}>
+            <GatsbyImage aspectratio={1 / 1} image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{props.title}</h5>
