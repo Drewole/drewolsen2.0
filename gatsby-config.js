@@ -1,4 +1,5 @@
 module.exports = {
+
   siteMetadata: {
     title: "Drew Olsen Portfolio",
     available: true,

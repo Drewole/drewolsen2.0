@@ -40,36 +40,36 @@ const Contact = () => {
                 .required('Required'),
         }),
 
-        onSubmit: (values, actions) => {
-            setTimeout(() => {
-                console.log(JSON.stringify(values, null, 2));
-                showToast();
-                actions.resetForm()
-                actions.setSubmitting(false);
-            }, 1000);
-
-        },
-        // handleSubmit: (values, actions) => {
-        //     fetch("/", {
-        //         method: "POST",
-        //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        //         body: encode({ "form-name": "contact-me", ...values })
-        //     })
-        //     .then(() => {
+        // onSubmit: (values, actions) => {
+        //     setTimeout(() => {
+        //         console.log(JSON.stringify(values, null, 2));
         //         showToast();
-        //         actions.resetForm();
-        //     })
-        //     .catch(() => {
-        //         alert('Error');
-        //     })
-        //     .finally(() => actions.setSubmitting(false))
-        // }
+        //         actions.resetForm()
+        //         actions.setSubmitting(false);
+        //     }, 1000);
+
+        // },
+        handleSubmit: (values, actions) => {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact-me", ...values })
+            })
+                .then(() => {
+                    showToast();
+                    actions.resetForm();
+                })
+                .catch(() => {
+                    alert('Error');
+                })
+                .finally(() => actions.setSubmitting(false))
+        }
     });
-    // const encode = (data) => {
-    //     return Object.keys(data)
-    //         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    //         .join("&");
-    // }
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
 
     return (
         <section id="contact">
@@ -79,7 +79,7 @@ const Contact = () => {
                     <span>(All fields required BTW)</span>
                 </p>
 
-                <form data-netlify={true} onSubmit={formik.handleSubmit} name="contact-me" id='contact-form'>
+                <form data-netlify="true" onSubmit={formik.handleSubmit} name="contact-me" id='contact-form'>
                     <div className="input-wrapper">
 
                         <input
