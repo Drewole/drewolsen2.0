@@ -49,7 +49,7 @@ const Contact = () => {
         //     }, 1000);
 
         // },
-        handleSubmit: (values, actions) => {
+        onSubmit: (values, actions) => {
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
