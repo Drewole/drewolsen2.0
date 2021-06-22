@@ -15,10 +15,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
     const projects = result.data.allProjectsJson.edges;
 
-    projects.forEach(({ node: { slug } }) => {
+    projects.forEach(({ node: { slug } }, index) => {
         actions.createPage({
             path: `/projects/${slug}`,
-            component: require.resolve('./src/pages/projects/ProjectLayout.js'),
+            component: require.resolve('./src/templates/ProjectLayout.js'),
             context: { slug }
         });
     });

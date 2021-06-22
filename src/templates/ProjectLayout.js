@@ -1,15 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from './../../layouts/Layout'
-import Footer from '../../components/Footer'
-import Project from '../../components/Project'
+import Layout from '../layouts/Layout'
+import Footer from '../components/Footer'
+import Project from '../components/Project'
 
 export const query = graphql`
     query ($slug: String!) {
         projectsJson(slug: {eq: $slug}) {
-            id
             name
-            type
+            slug
             year
             longDescription
             tags
@@ -19,11 +18,10 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                     placeholder: BLURRED
+                    layout:CONSTRAINED
                     formats: [AUTO,WEBP]
-                    layout: FULL_WIDTH
                     transformOptions: {fit: COVER cropFocus: NORTH}
-                    width: 1400
-                    height: 750
+                    sizes: "500,800,1400,1800"
                 )
               }
             }
@@ -33,44 +31,44 @@ export const query = graphql`
                     formats: [AUTO, WEBP]
                     transformOptions: {fit: COVER cropFocus: NORTH}
                     width: 800
-                    height:800
+                    height: 800
                 )
               }
             }
            	mobileImg {
-				childImageSharp {
-                    gatsbyImageData(
+				      childImageSharp {
+                  gatsbyImageData(
                     formats: [AUTO, WEBP]
                     transformOptions: {fit: COVER cropFocus: NORTH}
                     width: 800
                     height:800
-                    )
+                  )
               }
             }
         }
     }
 `
 const ProjectLayout = ({ data }) => {
-    const project = data.projectsJson;
-    return (
-        <Layout>
-            <Project
-                id={project.id}
-                name={project.name}
-                type={project.type}
-                year={project.year}
-                longDescription={project.longDescription}
-                tags={project.tags}
-                github={project.github}
-                extSite={project.extSite}
-                frontImg={project.frontImg}
-                insideImg={project.insideImg}
-                mobileImg={project.mobileImg}
+  const project = data.projectsJson;
+  return (
+    <Layout>
+      <Project
+        id={project.id}
+        name={project.name}
+        type={project.type}
+        year={project.year}
+        longDescription={project.longDescription}
+        tags={project.tags}
+        github={project.github}
+        extSite={project.extSite}
+        frontImg={project.frontImg}
+        insideImg={project.insideImg}
+        mobileImg={project.mobileImg}
 
-            />
-            <Footer />
-        </Layout>
-    )
+      />
+      <Footer />
+    </Layout>
+  )
 }
 
 export default ProjectLayout

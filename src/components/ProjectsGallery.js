@@ -25,8 +25,7 @@ const ProjectsGallery = () => {
 					placeholder: BLURRED
 					formats: [AUTO,WEBP]
 					transformOptions: {fit: COVER cropFocus: NORTH}
-					width: 1400
-					height: 750
+					sizes: "500,800,1400,1800"
 				)
               }
             }

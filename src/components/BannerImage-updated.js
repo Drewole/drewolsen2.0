@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MdCardTravel } from 'react-icons/md';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BackgroundImage from 'gatsby-background-image';
@@ -7,29 +7,28 @@ import SocialLinks from './SocialLinks';
 import Dust from './Dust';
 
 const BannerImage = () => {
-	const data = useStaticQuery(
-		graphql`
+	const data = graphql`
 			query {
 				desktop: file(relativePath: { eq: "pineTreesBkg.jpg" }) {
-				childImageSharp {
-					fluid(quality: 90, maxWidth: 1920) {
-					...GatsbyImageSharpFluid_withWebp
+					childImageSharp {
+						placeholder: BLURRED
+						formats: [AUTO,WEBP]
+						outputPixelDensities: 1.5
+						quality: 85
 					}
-				}
 				}
 			}
     	`
-	)
 
 	// Set ImageData.
-	const imageData = data.desktop.childImageSharp.fluid
+	const imageData = getImage(data)
 
 	return (
 		<BackgroundImage
 			Tag="section"
 			className={"banner-text"}
 			fluid={imageData}
-			backgroundColor={`#040e18`}
+			backgroundColor={`#2f2b41`}
 		>
 			<Dust />
 			<h1 className="responsive-headline">Full-Stack Developer</h1>

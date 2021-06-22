@@ -10,7 +10,9 @@ const Project = ({ name, year, longDescription, tags, github, extSite, frontImg,
     const imageInside = getImage(insideImg)
     return (
         <section className="project-single">
-            <GatsbyImage image={imageHero} alt={name} />
+            {imageHero && (
+                <GatsbyImage image={imageHero} alt={`Front page of ${name}'s website`} />
+            )}
             <div className="flex-wrapper">
                 <div className="text-content">
 
@@ -38,9 +40,12 @@ const Project = ({ name, year, longDescription, tags, github, extSite, frontImg,
                     </div>
                 </div>
                 <div className="gallery">
-                    <GatsbyImage image={imageInside} alt={`Inside image of ${name}'s website`} />
+
+                    {imageInside && (
+                        <GatsbyImage aspectratio={1 / 1} image={imageInside} alt={`Inside image of ${name}'s website`} />
+                    )}
                     {imageMobile && (
-                        <GatsbyImage image={imageMobile} alt={`Mobile layout of ${name}'s website`} />
+                        <GatsbyImage aspectratio={1 / 1} image={imageMobile} alt={`Mobile layout of ${name}'s website`} />
                     )}
 
                 </div>

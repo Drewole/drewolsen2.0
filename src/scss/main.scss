@@ -706,6 +706,9 @@ ul#nav {
 		img {
 			border-radius: 4px;
 		}
+		.gatsby-image-wrapper {
+			margin-bottom: 25px;
+		}
 	}
 
 	.link-box {
@@ -1067,9 +1070,10 @@ footer {
 		display: flex;
 		justify-content: center;
 		padding: 4%;
-		img.gatsby-image-wrapper {
+		.gatsby-image-wrapper {
 			border-radius: 4px;
 			flex-basis: 50%;
+			margin-bottom: 2%;
 		}
 	}
 }
