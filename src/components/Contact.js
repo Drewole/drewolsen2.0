@@ -80,6 +80,7 @@ const Contact = () => {
                 </p>
 
                 <form data-netlify="true" onSubmit={formik.handleSubmit} name="contact-me" id='contact-form'>
+                    <input type="hidden" name="form-name" value="contact-me" />
                     <div className="input-wrapper">
 
                         <input
