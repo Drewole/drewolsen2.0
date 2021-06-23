@@ -1258,9 +1258,12 @@ footer {
 /// Contact Form
 #contact {
 	form {
-		width: 85%;
+		width: 80%;
 		margin: 25px auto;
 		
+	}
+	.message {
+		padding: 20px 6%;
 	}
 }
 
