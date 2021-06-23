@@ -19,11 +19,11 @@ const Project = (props) => {
           <AniLink
             swipe
             direction="left"
-            entryOffset={80}
+            entryOffset={30}
             to={`/projects/${props.slug}`}
-            duration={1}
+            duration={0.8}
           >
-            <GatsbyImage loading="lazy" aspectratio={1 / 1} image={thumbImage} alt={props.title} />
+            <GatsbyImage aspectratio={1 / 1} image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{props.title}</h5>

@@ -63,7 +63,7 @@ const About = () => (
 						</p>
 					</div>
 					<div className="columns download">
-						<a href="https://drive.google.com/file/d/1i8chX2JYvaPvsJd__pZwLBONGygN0sDs/view?usp=sharing" className="button">
+						<a href="https://docs.google.com/document/d/13aRDfbAJbjCxB8CvQ_ErsKtz1Sn7N7-E_5pJXJmljXg/edit?usp=sharing" className="button">
 							<span>
 								<MdDescription />
 							</span>

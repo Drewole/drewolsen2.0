@@ -25,7 +25,7 @@ const Project = ({ name, year, longDescription, tags, github, extSite, frontImg,
                     </span>
 
                     <div className="link-box">
-                        <AniLink entryOffset={80} swipe direction="right" to="/#portfolio" className="btn back-to-projects">
+                        <AniLink entryOffset={30} swipe direction="right" duration={3} to="/#portfolio" className="btn back-to-projects">
                             More Work
                         </AniLink>
                         {extSite && (
