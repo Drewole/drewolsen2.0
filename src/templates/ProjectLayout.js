@@ -14,14 +14,25 @@ export const query = graphql`
             tags
             github
             extSite
-            frontImg {
+            mainImg {
               childImageSharp {
                 gatsbyImageData(
                     placeholder: BLURRED
-                    layout:CONSTRAINED
+                    layout:FULL_WIDTH
                     formats: [AUTO,WEBP]
                     transformOptions: {fit: COVER cropFocus: NORTH}
                     sizes: "500,800,1400,1800"
+                )
+              }
+            }
+            frontImg {
+              childImageSharp {
+                gatsbyImageData(
+                    layout:CONSTRAINED
+                    formats: [AUTO,WEBP]
+                    transformOptions: {fit: COVER cropFocus: NORTH}
+                    width: 800
+                    height: 800
                 )
               }
             }
@@ -61,6 +72,7 @@ const ProjectLayout = ({ data }) => {
         tags={project.tags}
         github={project.github}
         extSite={project.extSite}
+        mainImg={project.mainImg}
         frontImg={project.frontImg}
         insideImg={project.insideImg}
         mobileImg={project.mobileImg}

@@ -92,7 +92,7 @@ const Contact = () => {
                             value={formik.values.name}
                         />
                         <label className="form-label" htmlFor="name">Full Name</label>
-                        {formik.touched.name && formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
+                        <div className="error">{formik.touched.name && formik.errors.name ? formik.errors.name : null}</div>
                     </div>
 
                     <div className="input-wrapper">
@@ -107,7 +107,7 @@ const Contact = () => {
                         />
                         <label className="form-label" htmlFor="email">Email Address</label>
 
-                        {formik.touched.email && formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
+                        <div className="error">{formik.touched.email && formik.errors.email ? formik.errors.email : null}</div>
 
                     </div>
                     <div className="input-wrapper">
@@ -122,7 +122,7 @@ const Contact = () => {
                         />
                         <label className="form-label" htmlFor="subject">Subject</label>
 
-                        {formik.touched.subject && formik.errors.subject ? <div className="error">{formik.errors.subject}</div> : null}
+                        <div className="error">{formik.touched.subject && formik.errors.subject ? formik.errors.subject : null}</div>
 
                     </div>
                     <div className="input-wrapper">
@@ -137,7 +137,7 @@ const Contact = () => {
                         />
                         <label className="form-label" htmlFor="message">How can I help?</label>
 
-                        {formik.touched.message && formik.errors.message ? <div className="error">{formik.errors.message}</div> : null}
+                        <div className="error">{formik.touched.message && formik.errors.message ? formik.errors.message : null}</div>
 
                     </div>
                     <button className="button" type="submit">Send</button>

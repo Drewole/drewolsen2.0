@@ -1,17 +1,18 @@
 import React from 'react'
 import { FaTag, FaGithub } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-const Project = ({ name, year, longDescription, tags, github, extSite, frontImg, insideImg, mobileImg }) => {
+const Project = ({ name, year, longDescription, tags, github, extSite, frontImg, mainImg, insideImg, mobileImg }) => {
 
-    const imageHero = getImage(frontImg)
+    const imageHero = getImage(mainImg)
+    const imageFront = getImage(frontImg)
     const imageMobile = getImage(mobileImg)
     const imageInside = getImage(insideImg)
     return (
         <section className="project-single">
             {imageHero && (
-                <GatsbyImage image={imageHero} alt={`Front page of ${name}'s website`} />
+                <GatsbyImage objectFit="cover" height="900" loading="eager" image={imageHero} alt={`Front page of ${name}'s website`} />
             )}
             <div className="flex-wrapper">
                 <div className="text-content">
@@ -24,9 +25,9 @@ const Project = ({ name, year, longDescription, tags, github, extSite, frontImg,
                     </span>
 
                     <div className="link-box">
-                        <Link to="/#portfolio" className="btn back-to-projects">
+                        <AniLink entryOffset={80} swipe direction="right" to="/#portfolio" className="btn back-to-projects">
                             More Work
-                        </Link>
+                        </AniLink>
                         {extSite && (
                             <a className="btn" href={`${extSite}`}>
                                 View Site
@@ -42,10 +43,13 @@ const Project = ({ name, year, longDescription, tags, github, extSite, frontImg,
                 <div className="gallery">
 
                     {imageInside && (
-                        <GatsbyImage aspectratio={1 / 1} image={imageInside} alt={`Inside image of ${name}'s website`} />
+                        <GatsbyImage loading="lazy" aspectratio={1 / 1} image={imageInside} alt={`Inside page of ${name}'s website`} />
                     )}
                     {imageMobile && (
-                        <GatsbyImage aspectratio={1 / 1} image={imageMobile} alt={`Mobile layout of ${name}'s website`} />
+                        <GatsbyImage loading="lazy" aspectratio={1 / 1} image={imageMobile} alt={`Mobile layout of ${name}'s website`} />
+                    )}
+                    {imageFront && (
+                        <GatsbyImage loading="lazy" aspectratio={1 / 1} image={imageFront} alt={`Front page of ${name}'s website`} />
                     )}
 
                 </div>

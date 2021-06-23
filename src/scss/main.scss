@@ -582,7 +582,7 @@ ul#nav {
 			position: relative;
 			box-shadow: 0px 14px 13px -8px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
 			transition: all 0.2s $transitionStyle;;
-			border-radius: 5px;
+			border-radius: 8px;
 			&:hover {
 				border-radius: 7px;
 				box-shadow:
@@ -664,6 +664,7 @@ ul#nav {
 
 	img {
 		border-bottom: 10px solid darken($offWhite, 25%);
+		box-shadow: 0px 14px 13px -8px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
 	}
 	.flex-wrapper {
 		display: flex;
@@ -705,9 +706,11 @@ ul#nav {
 		padding: 4%;
 		img {
 			border-radius: 4px;
+			
 		}
 		.gatsby-image-wrapper {
-			margin-bottom: 25px;
+			margin: 0 10px 25px;
+			box-shadow: 0px 14px 13px -8px rgba(26, 24, 36, 0.6), 0px 35px 15px 5px rgba(26, 24, 36, 0);
 		}
 	}
 
@@ -715,7 +718,7 @@ ul#nav {
 		display: flex;
 		flex-wrap: wrap;
 		background: none;
-		padding: 75px 10%;
+		padding: 75px 15%;
 		justify-content: space-around;
 		align-items: center;
 		.github {
@@ -800,9 +803,13 @@ ul#nav {
 
 #contact {
 	padding: 75px 0 150px;
-	background-color: #262335;
 	opacity: 1;
-	background-image:  repeating-radial-gradient( circle at 25% 84%, transparent 0, #262335 29px ), repeating-linear-gradient( #23203355, #232033 );
+	background:
+	linear-gradient(-45deg, #222030 25%, transparent 25%, transparent 75%, #262335 75%, #262335) 0 0,
+	linear-gradient(-45deg, #262335 25%, transparent 25%, transparent 75%, #222030 75%, #222030) 1em 1em,
+	linear-gradient(45deg, #262335 17%, transparent 17%, transparent 25%, #262335 25%, #262335 36%, transparent 36%, transparent 64%, #262335 64%, #262335 75%, transparent 75%, transparent 83%, #262335 83%) 1em 1em;
+	background-color: #222030;
+	background-size: 2em 2em;
 	h2 {
 		color: $mutedWhite;
 		padding: 50px auto;
@@ -812,15 +819,19 @@ ul#nav {
 		font-size: 5rem;
 	}
 	form {
-		width: 60%;
+		width: 40%;
 		margin: 25px auto;
 		
+	}
+	.error {
+		min-height: 30px;
+		margin-bottom: -8px;
 	}
 	
 	.input-wrapper {
 		display: flex;
 		flex-direction: column-reverse;
-		padding: 10px 0;
+		padding-bottom: 10px
 	}
 	.input-wrapper label{
 		color: $offWhite;
@@ -1053,6 +1064,11 @@ footer {
 			width: 50%;
 		}
 	}
+	#contact {
+		form {
+			width: 60%;
+		}
+	}
 }
 
 /* mobile wide/smaller tablets
@@ -1064,6 +1080,12 @@ footer {
 	.text-content {
 		padding: 4%;
 		flex-basis: 100%;
+	}
+	.link-box {
+		display: flex;
+		flex-wrap: wrap;
+		background: none;
+		padding: 75px 5%;
 	}
 	.gallery {
 		flex-basis: 100%;
@@ -1207,6 +1229,15 @@ footer {
 				}
 			}
 		}
+	}
+}
+
+/// Contact Form
+#contact {
+	form {
+		width: 85%;
+		margin: 25px auto;
+		
 	}
 }
 

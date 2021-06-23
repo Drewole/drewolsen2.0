@@ -66,6 +66,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-transition-link`,
     `gatsby-transformer-json`
   ],
 };

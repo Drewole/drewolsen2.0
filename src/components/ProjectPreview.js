@@ -1,7 +1,7 @@
 import React from "react"
 import { FaPlus } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
@@ -16,8 +16,14 @@ const Project = (props) => {
     <>
       <div className="portfolio-item">
         <div className="item-wrap" >
-          <Link to={`/projects/${props.slug}`}>
-            <GatsbyImage aspectratio={1 / 1} image={thumbImage} alt={props.title} />
+          <AniLink
+            swipe
+            direction="left"
+            entryOffset={80}
+            to={`/projects/${props.slug}`}
+            duration={1}
+          >
+            <GatsbyImage loading="lazy" aspectratio={1 / 1} image={thumbImage} alt={props.title} />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{props.title}</h5>
@@ -29,7 +35,7 @@ const Project = (props) => {
             <div className="link-icon">
               <FaPlus />
             </div>
-          </Link>
+          </AniLink>
         </div>
       </div>
     </>
