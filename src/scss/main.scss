@@ -113,6 +113,10 @@ a span {
 	color: #6833d3;
 	transform: scale(1.2);
 }
+.linkedin svg:hover {
+	color: #0a66c2;
+	transform: scale(1.2);
+}
 
 /* 
 ////// Header Styles
@@ -389,9 +393,10 @@ ul#nav {
 		margin-top: -80px;
 	}
 	&:after {
-		content: url(../images/roundedAccent2.svg);
+		content: url(../images/roundedAccent.svg);
 		position: absolute;
 		top: 97.1%;
+		z-index: 1;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -512,8 +517,26 @@ ul#nav {
 
 #portfolio {
 	background: $aqua;
-	padding-top: 90px;
-	padding-bottom: 60px;
+	position: relative;
+	padding: 90px 0;
+	&:after {
+		content: url(../images/roundedAccentTeal.svg);
+		position: absolute;
+		top: 99%;
+		left: 0;
+		z-index: 1;
+		right: 0;
+		margin: 0 auto;
+		width: 300px;
+
+		@media only screen and (min-width: 900px) {
+			#about {
+				&:after {
+					top: 90%;
+				}
+			}
+		}
+	}
 	h1 {
 		font: 16px/24px "Montserrat", sans-serif;
 		text-transform: uppercase;
@@ -877,14 +900,14 @@ ul#nav {
 		color: darken($offWhite, 25%);
     }
 	.message {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		color: $offWhite;
 		font-weight: bold;
 		text-align: center;
 		padding: 20px 20%;
 
 		span {
-			font-size: 1rem;
+			font-size: 1.5rem;
 			font-weight: bold;
 			color: $coral;
 		}

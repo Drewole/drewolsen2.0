@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import logo from "../images/logo.svg"
 
 const Sitetitle = () => (
-  <Link className="logo" to="/">
+  <Link className="logo" to="/#home">
     <h1 className="site-title">
       <img alt="Drew Olsen Design Logo" src={logo} /> Drew Olsen
     </h1>

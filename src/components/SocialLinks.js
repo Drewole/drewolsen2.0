@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillInstagram, AiOutlineTwitter, AiOutlineGithub } from 'react-icons/ai';
+import { AiFillInstagram, AiOutlineTwitter, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 // https://gorangajic.github.io/react-icons/fa.html
 
 const SocialLinks = () => (
@@ -12,6 +12,11 @@ const SocialLinks = () => (
 		<li>
 			<a className="instagram" rel="noopener" href="https://instagram.com/drewole">
 				<AiFillInstagram />
+			</a>
+		</li>
+		<li>
+			<a className="linkedin" rel="noopener" href="https://www.linkedin.com/in/drew-olsen-74508447/">
+				<AiOutlineLinkedin />
 			</a>
 		</li>
 		<li>
