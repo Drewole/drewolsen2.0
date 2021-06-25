@@ -2,20 +2,25 @@ import React from "react"
 import { FaPlus } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { motion } from "framer-motion"
 
 const Project = (props) => {
   const thumbImage = getImage(props.squareImg)
 
-  // function randomRotate() {
-  //   let rand = (min, max) => Math.floor(Math.random() * (max - min)) + min
-  //   let randomNum = rand(- 100, 100) / 100
-  //   return randomNum
-  // }
+  function randomRotate() {
+    let rand = (min, max) => Math.floor(Math.random() * (max - min)) + min
+    let randomNum = rand(- 100, 100) / 100
+    return randomNum
+  }
 
   return (
     <>
       <div className="portfolio-item">
-        <div className="item-wrap" >
+        <motion.div
+          className="item-wrap"
+          whileHover={{ scale: 1.1, rotate: randomRotate() }}
+          whileTap={{ scale: 0.9 }}
+        >
           <AniLink
             swipe
             direction="left"
@@ -36,7 +41,7 @@ const Project = (props) => {
               <FaPlus />
             </div>
           </AniLink>
-        </div>
+        </motion.div>
       </div>
     </>
   )

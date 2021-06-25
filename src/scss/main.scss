@@ -289,7 +289,7 @@ header {
 	left: 0;
 	top: 0;
 	background: rgba(39, 37, 53, 0.8);
-	transition: all 0.3s $transitionStyle;
+	
 	//// Adds background after scrolling w/ some JS
 	&.scroll {
 		background: rgba(33, 30, 50, 0.858);
@@ -309,7 +309,7 @@ ul#nav {
 	width: auto;
 	padding-left: 0;
 	margin: 0;
-	transition: all 0.4s $transitionStyle;
+	transition: all 0.3s $transitionStyle;
 	text-align: center;
 
 	li {
@@ -324,7 +324,7 @@ ul#nav {
 			text-decoration: none;
 			text-align: left;
 			color: #fff;
-			transition: color 0.2s $transitionStyle;
+			transition: color 0.3s $transitionStyle;
 
 			&:hover {
 				color: $coral;
@@ -395,7 +395,7 @@ ul#nav {
 	&:after {
 		content: url(../images/roundedAccent.svg);
 		position: absolute;
-		top: 97.1%;
+		top: calc(100% - 25px);
 		z-index: 1;
 		left: 0;
 		right: 0;
@@ -430,8 +430,13 @@ ul#nav {
 		max-width: 100%;
 		max-height: 100%;
 		border-radius: 50%;
+		overflow: hidden;
 		border: 6px solid darken($purple, 5%);
 		box-shadow: 0 0 0 12px $purple, 0 -10px 0 7px lighten($purple, 5%);
+
+		img {
+			border-radius: 50%;
+		}
 	}
 	.pic {
 		p {
@@ -522,7 +527,7 @@ ul#nav {
 	&:after {
 		content: url(../images/roundedAccentTeal.svg);
 		position: absolute;
-		top: 99%;
+		top: calc(100% - 25px);
 		left: 0;
 		z-index: 1;
 		right: 0;

@@ -6,7 +6,7 @@ import { FaChevronCircleUp } from "react-icons/fa"
 
 const Footer = () => {
   let year = new Date().getFullYear();
-  console.log(year)
+
   return (
     <footer id="footer">
       <SocialLinks />
