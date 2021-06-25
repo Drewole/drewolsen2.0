@@ -835,10 +835,10 @@ ul#nav {
 	padding: 75px 0 150px;
 	opacity: 1;
 	background:
-	linear-gradient(-45deg, #222030 25%, transparent 25%, transparent 75%, #262335 75%, #262335) 0 0,
-	linear-gradient(-45deg, #262335 25%, transparent 25%, transparent 75%, #222030 75%, #222030) 1em 1em,
-	linear-gradient(45deg, #262335 17%, transparent 17%, transparent 25%, #262335 25%, #262335 36%, transparent 36%, transparent 64%, #262335 64%, #262335 75%, transparent 75%, transparent 83%, #262335 83%) 1em 1em;
-	background-color: #222030;
+	linear-gradient(-45deg, darken($purple, 5%) 25%, transparent 25%, transparent 75%, darken($purple, 3%) 75%, darken($purple, 3%)) 0 0,
+	linear-gradient(-45deg, darken($purple, 3%) 25%, transparent 25%, transparent 75%, darken($purple, 5%) 75%, darken($purple, 5%)) 1em 1em,
+	linear-gradient(45deg, darken($purple, 3%) 17%, transparent 17%, transparent 25%, darken($purple, 3%) 25%, darken($purple, 3%) 36%, transparent 36%, transparent 64%, darken($purple, 3%) 64%, darken($purple, 3%) 75%, transparent 75%, transparent 83%, darken($purple, 3%) 83%) 1em 1em;
+	background-color: darken($purple, 5%);
 	background-size: 2em 2em;
 	h2 {
 		color: $mutedWhite;
@@ -875,30 +875,6 @@ ul#nav {
 		color: $coral;
 
 	}
-	input, textarea {
-		width: 100%;
-		background-color: lighten($purple, 3%);
-		border-radius: 3px;
-		font-family: "Montserrat", sans-serif;
-		transition: all 300ms $transitionStyle;
-		color:$offWhite;
-		font-size: 1.6rem;
-		font-weight: 500;
-		border: 2px solid transparent;
-		
-		&:focus {
-			border: 2px solid lighten($purple, 15%);
-			box-shadow: 0 2px 8px darken($purple, 10%);
-		}
-
-	}
-	label.form-label, label.form-label {
-		transform: translate(0,0) !important;
-		color: $offWhite;
-		transition: all 300ms $transitionStyle;
-	}
-
-// TODO: Need to figure this out so the label moves upwards when the field is focused.
 	input:focus + label,
     input:not(:placeholder-shown) + label,
 	textarea:focus +label,
@@ -906,6 +882,40 @@ ul#nav {
 		// transform: translate(2rem, 4.5rem);
 		color: darken($offWhite, 25%);
     }
+	
+	input, textarea {
+		width: 100%;
+		background-color: lighten($purple, 1%);
+		border-radius: 3px;
+		font-family: "Montserrat", sans-serif;
+		transition: all 200ms $transitionStyle;
+		color:$offWhite;
+		font-size: 1.6rem;
+		font-weight: 500;
+		border: 2px solid transparent;
+		& ~ label {
+			transform: translate(2rem, 4.5rem);
+		}
+		
+		&:focus {
+			border: 2px solid lighten($purple, 15%);
+			box-shadow: 0 2px 8px darken($purple, 10%);
+		}
+		&:focus + label {
+			color: white;
+			transform: translate(0,0);
+		}
+		&:not(:placeholder-shown) + label {
+			transform: translate(0,0)
+		}
+		// &:-webkit-autofill ~ label {
+		// 	transform: translate(0,0);
+		// }
+
+	}
+	
+// TODO: Need to figure this out so the label moves upwards when the field is focused.
+	
 	.message {
 		font-size: 2rem;
 		color: $offWhite;
