@@ -171,7 +171,7 @@ header {
 }
 .banner-text {
 	width: 100%;
-	padding: 200px 0;
+	padding: 175px 0 150px;
 	text-align: center;
 	hr {
 		width: 60%;
@@ -388,6 +388,7 @@ ul#nav {
 	padding-top: 40px;
 	padding-bottom: 66px;
 	position: relative;
+	border-top: 5px solid lighten($purple, 5%);
 
 	.row .three.columns {
 		margin-top: -80px;
