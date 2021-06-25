@@ -48,9 +48,9 @@ const BannerImage = () => {
 		>
 			<Dust />
 			<div>
-				<h1 className="responsive-headline">Full-Stack Developer</h1>
+				<h1 className="responsive-headline">Designer That Can Code</h1>
 				<h3>
-					A Multi-faceted Web Developer with a knack for effectively conceptualizing and delivering elegant, user-friendly solutions.
+					A Multi-faceted Full Stack Web Developer with a knack for effectively conceptualizing and delivering elegant, user-friendly solutions.
 					<br />
 
 				</h3>

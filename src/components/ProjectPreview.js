@@ -9,7 +9,7 @@ const Project = (props) => {
 
   function randomRotate() {
     let rand = (min, max) => Math.floor(Math.random() * (max - min)) + min
-    let randomNum = rand(- 100, 100) / 100
+    let randomNum = rand(- 120, 120) / 100
     return randomNum
   }
 
@@ -19,7 +19,7 @@ const Project = (props) => {
         <motion.div
           className="item-wrap"
           whileHover={{ scale: 1.1, rotate: randomRotate() }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.8 }}
         >
           <AniLink
             swipe

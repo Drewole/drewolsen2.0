@@ -9,7 +9,8 @@ const Contact = () => {
         toast("Your submission has been sent!", {
             position: toast.POSITION.BOTTOM_CENTER,
             // autoClose: false,
-            draggablePercent: 60
+            draggablePercent: 60,
+
         })
         toast.error("Please check your submission for errors.", {
             position: toast.POSITION.BOTTOM_CENTER,
@@ -56,11 +57,11 @@ const Contact = () => {
                 body: encode({ "form-name": "contact-me", ...values })
             })
                 .then(() => {
-                    showToast();
+                    showToast.toast();
                     actions.resetForm();
                 })
                 .catch(() => {
-                    alert('Error');
+                    showToast.error();
                 })
                 .finally(() => actions.setSubmitting(false))
         }
