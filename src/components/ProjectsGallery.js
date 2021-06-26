@@ -14,29 +14,9 @@ const ProjectsGallery = () => {
             type
             extSite
             slug
-			github
             year
-            longDescription
             shortDescription
             tags
-            frontImg {
-              childImageSharp {
-                gatsbyImageData(
-					placeholder: BLURRED
-					formats: [AUTO,WEBP]
-					transformOptions: {fit: COVER cropFocus: NORTH}
-					sizes: "500,800,1400,1800"
-				)
-              }
-            }
-            insideImg {
-              childImageSharp {
-                gatsbyImageData(
-					outputPixelDensities: 1.5
-					formats: [AUTO,WEBP]
-					)
-              }
-            }
             squareImg {
               childImageSharp {
                 gatsbyImageData(

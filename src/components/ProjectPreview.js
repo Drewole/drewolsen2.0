@@ -18,7 +18,7 @@ const Project = (props) => {
       <div className="portfolio-item">
         <motion.div
           className="item-wrap"
-          whileHover={{ scale: 1.1, rotate: randomRotate() }}
+          whileHover={{ scale: 1.1, rotate: randomRotate(), duration: .2 }}
           whileTap={{ scale: 0.8 }}
         >
           <AniLink

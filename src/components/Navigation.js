@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
     <nav id="nav-wrap">
       <SiteLogo />
-      <ul id="nav" className="nav">
+      <ul id="nav" className="nav hidden">
         <li className={"#about"}>
           <AnchorLink
             title="Go to the about me section"

@@ -95,14 +95,15 @@ a span {
 }
 .github,
 .twitter,
-.instagram {
+.instagram,
+.linkedin {
 	font-size: 32px;
 	svg {
-		transition: all 200ms $transitionStyle;
+		transition: all 300ms $transitionStyle;
 	}
 }
 .github svg:hover {
-	color: #252525;
+	color: #fff;
 	transform: scale(1.2);
 }
 .twitter svg:hover {
@@ -123,7 +124,6 @@ a span {
 */
 
 header {
-	position: fixed;
 	// background-color: lighten($purple, 5%);
 	// border-bottom: 10px solid lighten($purple, 5%);
 	width: 100%;
@@ -146,6 +146,7 @@ header {
 		font: 14px/1.4em "Montserrat", sans-serif;
 		color: white;
 		margin: 0;
+		font-weight: 500;
 		text-transform: uppercase;
 		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 		left: 4px;
@@ -159,8 +160,12 @@ header {
 		}
 	}
 }
+.headroom-wrapper {
+	position: relative;
+	width: 100%;
+}
 #dust {
-	margin-top: -10px;
+	margin-top: -50px;
 }
 .hero-bkg {
 	display: flex;
@@ -254,10 +259,6 @@ header {
 
 			a {
 				color: #fff;
-
-				&:hover {
-					color: #11abb0;
-				}
 			}
 		}
 	}
@@ -610,21 +611,15 @@ ul#nav {
 			overflow: hidden;
 			position: relative;
 			box-shadow: 0px 14px 13px -8px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
-			transition: all 0.2s $transitionStyle;;
+			transition: all 0.2s $transitionStyle;
 			border-radius: 8px;
 			&:hover {
-				box-shadow:
-					0 2.1px 2.2px -2px rgba(0, 0, 0, 0.048),
-					0 5.1px 5.3px -2px rgba(0, 0, 0, 0.069),
-					0 9.6px 10px -2px rgba(0, 0, 0, 0.085),
-					0 17.2px 17.9px -2px rgba(0, 0, 0, 0.101),
-					0 32.2px 33.4px -2px rgba(0, 0, 0, 0.122),
-					0 77px 80px -2px rgba(0, 0, 0, 0.17)
-					;
+				
+				transform: translateY(-10);
 
 				img {
-					filter: blur(3px);
-					transform: scale(1.06);
+					
+					// transform: scale(1.09);
 				}
 			}
 

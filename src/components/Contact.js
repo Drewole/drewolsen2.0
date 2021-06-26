@@ -18,6 +18,7 @@ const Contact = () => {
             position: toast.POSITION.BOTTOM_LEFT,
             // autoClose: false,
             draggablePercent: 60,
+            autoClose: false,
 
         })
     };

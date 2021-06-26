@@ -1,13 +1,16 @@
 import React from 'react';
 
 import Navigation from './Navigation';
+import Headroom from 'react-headroom'
 
 const Header = () => {
 
 	return (
-		<header>
-			<Navigation />
-		</header>
+		<Headroom>
+			<header>
+				<Navigation />
+			</header>
+		</Headroom>
 	);
 };
 
