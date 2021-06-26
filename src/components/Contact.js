@@ -5,17 +5,20 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup';
 
 const Contact = () => {
-    const showToast = () => {
-        toast("Your submission has been sent!", {
-            position: toast.POSITION.BOTTOM_CENTER,
+    const toastSuccess = () => {
+        toast("Your submission has been sent! 🚀", {
+            position: toast.POSITION.BOTTOM_RIGHT,
             // autoClose: false,
             draggablePercent: 60,
 
         })
-        toast.error("Please check your submission for errors.", {
-            position: toast.POSITION.BOTTOM_CENTER,
+    };
+    const toastError = () => {
+        toast.error("🙊 Something went wrong with your submission. Please try again.", {
+            position: toast.POSITION.BOTTOM_LEFT,
             // autoClose: false,
-            draggablePercent: 60
+            draggablePercent: 60,
+
         })
     };
 
@@ -44,10 +47,15 @@ const Contact = () => {
         // onSubmit: (values, actions) => {
         //     setTimeout(() => {
         //         console.log(JSON.stringify(values, null, 2));
-        //         showToast();
-        //         actions.resetForm()
+        //         toastSuccess();
         //         actions.setSubmitting(false);
         //     }, 1000);
+        //     setTimeout(() => {
+
+        //         toastError();
+        //         actions.resetForm()
+        //         actions.setSubmitting(false);
+        //     }, 3000);
 
         // },
         onSubmit: (values, actions) => {
@@ -57,11 +65,16 @@ const Contact = () => {
                 body: encode({ "form-name": "contact-me", ...values })
             })
                 .then(() => {
-                    showToast.toast();
-                    actions.resetForm();
+                    setTimeout(() => {
+                        toastSuccess();
+                        actions.resetForm();
+                    }, 1000);
                 })
                 .catch(() => {
-                    showToast.error();
+                    setTimeout(() => {
+                        toastError();
+                        actions.resetForm();
+                    }, 1000);
                 })
                 .finally(() => actions.setSubmitting(false))
         }
