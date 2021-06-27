@@ -611,15 +611,16 @@ ul#nav {
 			overflow: hidden;
 			position: relative;
 			box-shadow: 0px 14px 13px -8px rgba(38, 35, 53, 0.6), 0px 35px 15px 5px rgba(38, 35, 53, 0);
-			transition: all 0.2s $transitionStyle;
+			transition: all 0.1s $transitionStyle;
 			border-radius: 8px;
 			&:hover {
 				
 				transform: translateY(-10);
+				filter: blur(1.2);
 
 				img {
 					
-					// transform: scale(1.09);
+					transform: scale(1.1);
 				}
 			}
 

@@ -9,7 +9,7 @@ const Project = (props) => {
 
   function randomRotate() {
     let rand = (min, max) => Math.floor(Math.random() * (max - min)) + min
-    let randomNum = rand(- 120, 120) / 100
+    let randomNum = rand(- 130, 130) / 100
     return randomNum
   }
 
