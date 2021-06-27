@@ -19,7 +19,7 @@ const About = () => (
 			<div className="nine columns main-col">
 				<h2>About Me</h2>
 				<p>
-					My name is Drew, and I am a Full-Stack Web Developer with around ten years of experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
+					My name is Drew, and I am a Full-Stack Web Developer with around eight years of web development experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
 				</p>
 				<p>
 					My start in Web Development began ten years ago and I have strived to be on the cutting edge of the
