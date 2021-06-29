@@ -575,16 +575,15 @@ ul#nav {
 			flex-direction: column;
 
 			h5 {
-				font: 17px/21px "Montserrat", sans-serif;
+				font: 20px/21px "Montserrat", sans-serif;
 				font-weight: 800;
 				margin-bottom: 0;
 				color: #fff;
 			}
 			h6 {
 				font: 15px/21px "Montserrat", sans-serif;
-				font-weight: 500;
-				font-size: 10px;
-				color: $aqua;
+				font-weight: 600;
+				color: $coral;
 				margin: 0 0 20px;
 			}
 			p {
@@ -596,7 +595,7 @@ ul#nav {
 			p.type {
 				color: $offWhite;
 				font-weight: 800;
-				font-size: 1rem;
+				font-size: 1.2rem;
 				margin-top: auto;
 				text-transform: uppercase;
 				align-self: flex-end;
@@ -617,11 +616,10 @@ ul#nav {
 			border-radius: 8px;
 			&:hover {
 				
-				transform: translateY(-10);
-				filter: blur(1.3);
-
+				transform: translateY(-10px);
+				
 				img {
-					
+					filter: blur(2px);
 					transform: scale(1.1);
 				}
 			}
@@ -1296,7 +1294,6 @@ footer {
 		}
 	}
 	/////////// Portfolio #portfolio {
-
 	.portfolio-item {
 		max-width: 45%;
 		margin-bottom: 45px !important;
@@ -1314,6 +1311,30 @@ footer {
 				}
 				p {
 					font-size: 13px;
+				}
+			}
+		}
+		.portfolio-item-meta {
+
+			h5 {
+				font: 15px/21px "Montserrat", sans-serif;
+				font-weight: 700;
+				margin-bottom: 0;
+				color: #fff;
+			}
+			h6 {
+				font: 13px/21px "Montserrat", sans-serif;
+
+			}
+			p {
+				font: 11px/18px "Montserrat", sans-serif;
+
+			}
+			p.type {
+				font-size: 1rem;
+
+				span {
+					font-weight: 400;
 				}
 			}
 		}

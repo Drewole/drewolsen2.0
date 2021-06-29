@@ -1,5 +1,5 @@
 import React from "react"
-import { FaPlus } from "react-icons/fa"
+// import { FaPlus } from "react-icons/fa"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { motion } from "framer-motion"
@@ -37,9 +37,9 @@ const Project = (props) => {
                 <p className="type"><span>Type: </span>{props.type}</p>
               </div>
             </div>
-            <div className="link-icon">
+            {/* <div className="link-icon">
               <FaPlus focusable='false' />
-            </div>
+            </div> */}
           </AniLink>
         </motion.div>
       </div>
