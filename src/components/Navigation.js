@@ -17,7 +17,7 @@ const Navigation = () => {
             to="/#about"
           >
             <span>
-              <MdFace />
+              <MdFace focusable={false} />
             </span>
             About
           </AnchorLink>
@@ -29,7 +29,7 @@ const Navigation = () => {
             className="portfolio"
           >
             <span>
-              <MdCardTravel />
+              <MdCardTravel focusable={false} />
             </span>
             Portfolio
           </AnchorLink>
@@ -42,7 +42,7 @@ const Navigation = () => {
             to="/#contact"
           >
             <span>
-              <MdDescription />
+              <MdDescription focusable={false} />
             </span>
             Contact
           </AnchorLink>

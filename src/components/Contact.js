@@ -44,7 +44,7 @@ const Contact = () => {
             message: Yup.string()
                 .required('Required'),
         }),
-
+        //TODO: Should add a if dev environment 
         // onSubmit: (values, actions) => {
         //     setTimeout(() => {
         //         console.log(JSON.stringify(values, null, 2));
@@ -105,6 +105,7 @@ const Contact = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.name}
+                            autocomplete="name"
                         />
                         <label className="form-label" htmlFor="name">Full Name</label>
                         <div className="error">{formik.touched.name && formik.errors.name ? formik.errors.name : null}</div>
@@ -119,6 +120,7 @@ const Contact = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.email}
+                            autoComplete="email"
                         />
                         <label className="form-label" htmlFor="email">Email Address</label>
 
@@ -134,6 +136,7 @@ const Contact = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.subject}
+                            autoComplete="on"
                         />
                         <label className="form-label" htmlFor="subject">Subject</label>
 
@@ -149,6 +152,7 @@ const Contact = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.message}
+                            autoComplete="on"
                         />
                         <label className="form-label" htmlFor="message">How can I help?</label>
 

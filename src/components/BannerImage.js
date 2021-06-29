@@ -58,7 +58,7 @@ const BannerImage = () => {
 				<AnchorLink className="btn" title="View my portfolio" to="/#portfolio">
 					View My Portfolio{' '}
 					<span>
-						<MdCardTravel />
+						<MdCardTravel focusable="false" />
 					</span>
 				</AnchorLink>
 				<hr />
