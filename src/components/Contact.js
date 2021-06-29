@@ -90,9 +90,9 @@ const Contact = () => {
         <section id="contact">
             <div className="row">
                 <h2>What's Up?</h2>
-                <p className="message">Shoot me a message and I will typically respond within one business day.<br />
-                    <span>(All fields required BTW)</span>
+                <p className="message">Shoot me a message and I will typically respond within one business day.
                 </p>
+                <p className="fields-required"><span>(All fields required BTW)</span></p>
 
                 <form data-netlify="true" onSubmit={formik.handleSubmit} name="contact-me" id='contact-form'>
                     <input type="hidden" name="form-name" value="contact-me" />

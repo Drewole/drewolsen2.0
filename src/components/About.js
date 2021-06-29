@@ -13,7 +13,7 @@ const About = () => (
 			<div className="three columns pic">
 				<ProfilePic />
 				<p className={available}>Have a Project? Looking to hire?</p>
-				<p>I'm <span>{availabilityText}</span></p>
+				<p className={available}>I'm <span>{availabilityText}</span></p>
 			</div>
 			<div className="nine columns main-col">
 				<h2>About Me</h2>
@@ -49,22 +49,22 @@ const About = () => (
 						<p className="contact-info">
 							<a href="tel:952.381.5559">
 								<span>
-									<FaPhone />
+									<FaPhone focusable="false" />
 								</span>
 								952.381.5559
 							</a>
 							<AnchorLink className="form-link" to="/#contact">
 								<span>
-									<FaEnvelope />
+									<FaEnvelope focusable="false" />
 								</span>
 								Contact Me
 							</AnchorLink>
 						</p>
 					</div>
 					<div className="columns download">
-						<a href="https://docs.google.com/document/d/13aRDfbAJbjCxB8CvQ_ErsKtz1Sn7N7-E_5pJXJmljXg/edit?usp=sharing" className="button">
+						<a aria-label="download-resume" href="https://docs.google.com/document/d/13aRDfbAJbjCxB8CvQ_ErsKtz1Sn7N7-E_5pJXJmljXg/edit?usp=sharing" className="button">
 							<span>
-								<MdDescription />
+								<MdDescription focusable="false" />
 							</span>
 							Download Resume
 						</a>

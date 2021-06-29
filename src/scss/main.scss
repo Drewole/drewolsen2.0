@@ -358,8 +358,9 @@ ul#nav {
 	}
 
 	h3 {
-		color: $coral;
+		color: lighten($coral, 3%);
 		font: 22px/30px "Montserrat", sans-serif;
+		font-weight: 500;
 	}
 
 	h4 {
@@ -386,7 +387,7 @@ ul#nav {
 */
 
 #about {
-	background-color: $purple;
+	background-color: darken($purple, 5%);
 	padding-top: 40px;
 	padding-bottom: 66px;
 	position: relative;
@@ -574,26 +575,26 @@ ul#nav {
 			flex-direction: column;
 
 			h5 {
-				font: 15px/21px "Montserrat", sans-serif;
+				font: 17px/21px "Montserrat", sans-serif;
 				font-weight: 800;
 				margin-bottom: 0;
 				color: #fff;
 			}
 			h6 {
-				font: 13px/21px "Montserrat", sans-serif;
+				font: 15px/21px "Montserrat", sans-serif;
 				font-weight: 500;
 				font-size: 10px;
 				color: $aqua;
 				margin: 0 0 20px;
 			}
 			p {
-				font: 12px/18px "Montserrat", sans-serif;
-				color: #e8e8e8;
+				font: 14px/18px "Montserrat", sans-serif;
+				color: &$offWhite;
 				font-weight: 500;
 				margin-bottom: 0;
 			}
 			p.type {
-				color: #c6c7c7;
+				color: $offWhite;
 				font-weight: 800;
 				font-size: 1rem;
 				margin-top: auto;
@@ -726,10 +727,11 @@ ul#nav {
 	}
 	.text-content {
 		padding: 4%;
-		flex-basis: 70%;
+		flex-basis: 65%;
+		max-width: 768 px;
 	}
 	.gallery {
-		flex-basis: 30%;
+		flex-basis: 35%;
 		padding: 4%;
 		img {
 			border-radius: 4px;
@@ -877,7 +879,7 @@ ul#nav {
 	textarea:focus +label,
 	textarea:not(:placeholder-shown) + label  {
 		// transform: translate(2rem, 4.5rem);
-		color: darken($offWhite, 25%);
+		color: darken($offWhite, 10%);
     }
 	
 	input, textarea {
@@ -918,14 +920,20 @@ ul#nav {
 		color: $offWhite;
 		font-weight: 600;
 		text-align: center;
-		padding: 20px 25%;
+		padding: 20px 5%;
 
+	}
+	.fields-required {
+		text-align: center;
 		span {
 			font-size: 1.5rem;
+			
 			font-weight: bold;
 			color: $coral;
+			padding-bottom: 25%;
 		}
 	}
+		
 	button {
 		margin: 0;
 		text-transform: uppercase;
@@ -969,7 +977,7 @@ ul#nav {
 
 footer {
 	padding: 48px;
-	background-color: lighten($brightCoral, 7%);
+	background-color: lighten($brightCoral, 10%);
 	text-align: center;
 	position: relative;
 	border-bottom: 8px solid darken($mutedCoral, 10%);
@@ -993,7 +1001,7 @@ footer {
 	}
 	.copyright li {
 		display: inline-block;
-		color: darken($mutedCoral, 15%);
+		color: darken($mutedCoral, 30%);
 	}
 	.ie footer .copyright li {
 		display: inline;
@@ -1021,16 +1029,20 @@ footer {
 	margin-left: 42px;
 	}
 	.social svg {
-	color: darken($mutedCoral, 10%);
+	color: $purple;
 	}
 
 	.social li:first-child {
 	margin-left: 0;
 	}
-	.cheatcode {
+	.cheatcode a {
 	color: $offWhite;
 	font-weight: 700;
 	font-size: .9rem;
+	text-shadow: 0 1px 1px rgba(0,0,0,.5);
+	&:visited {
+		color: $offWhite;
+	}
 	}
 }
 //// To Top Btn

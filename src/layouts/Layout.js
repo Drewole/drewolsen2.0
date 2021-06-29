@@ -7,10 +7,12 @@ import Header from '../components/Header'
 
 const Layout = ({ children }) => (
   <>
-    <Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang: 'en',
+      }}>
       <meta name={siteMetadata.author} description={siteMetadata.description} />
       <title>{siteMetadata.title}</title>
-      {/* <link rel="icon" href={Favicon} type="image/x-icon" /> */}
     </Helmet>
     <Header />
     {children}

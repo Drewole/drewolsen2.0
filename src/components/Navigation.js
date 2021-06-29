@@ -12,7 +12,6 @@ const Navigation = () => {
       <ul id="nav" className="nav hidden">
         <li className={"#about"}>
           <AnchorLink
-            title="Go to the about me section"
             className="about"
             to="/#about"
           >
@@ -24,7 +23,6 @@ const Navigation = () => {
         </li>
         <li className={"#portfolio"}>
           <AnchorLink
-            title="Go to my portfolio"
             to="/#portfolio"
             className="portfolio"
           >
@@ -36,7 +34,6 @@ const Navigation = () => {
         </li>
         <li className={"#resume"}>
           <AnchorLink
-            title="Contact me"
             className="contact"
             rel="noopener"
             to="/#contact"

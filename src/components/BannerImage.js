@@ -51,11 +51,9 @@ const BannerImage = () => {
 				<h1 className="responsive-headline">Designer That Can Code</h1>
 				<h3>
 					A Multi-faceted Full Stack Web Developer with a knack for effectively conceptualizing and delivering elegant, user-friendly solutions.
-					<br />
-
 				</h3>
 
-				<AnchorLink className="btn" title="View my portfolio" to="/#portfolio">
+				<AnchorLink className="btn" to="/#portfolio">
 					View My Portfolio{' '}
 					<span>
 						<MdCardTravel focusable="false" />

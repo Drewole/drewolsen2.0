@@ -38,7 +38,7 @@ const Project = (props) => {
               </div>
             </div>
             <div className="link-icon">
-              <FaPlus />
+              <FaPlus focusable='false' />
             </div>
           </AniLink>
         </motion.div>
