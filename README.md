@@ -26,7 +26,6 @@ Not for use.
 
 - [React](https://reactjs.org/)
 - [Gatsby](https://gatsbyjs.com)
-- 
 
 
 ## Questions
