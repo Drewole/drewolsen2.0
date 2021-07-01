@@ -1,5 +1,11 @@
 # Drew Olsen Design, 2.0
 
+<p align="center">
+  <a href="#">
+    <img src=".src/screenshot.png" alt="screenshot"/>
+  </a>
+</p>
+
 <br />
 
 <h3 align="center">My New Drew Olsen Design</h3>
