@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#">
-    <img src=".src/screenshot.png" alt="screenshot"/>
+    <img src="src/screenshot.png" alt="screenshot"/>
   </a>
 </p>
 
