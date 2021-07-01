@@ -40,12 +40,6 @@ const About = () => (
 					<div className="columns contact-details">
 						<h2>Contact Details</h2>
 						<h4>Drew Olsen</h4>
-						<p className="address">
-							<span>
-								11432 Zion Cir
-								<br /> Bloomington, MN 55437
-							</span>
-						</p>
 						<p className="contact-info">
 							<a href="tel:952.381.5559">
 								<span>
