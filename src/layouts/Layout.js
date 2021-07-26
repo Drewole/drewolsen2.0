@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
       <meta name="description" content="Drew Olsen's Personal Portfolio" />
       <meta name="title" property="og:title" content="Drew Olsen's Portfolio" />
       <meta property="og:type" content="Website" />
-      <meta name="image" property="og:image" content="https://flic.kr/p/2mdvcNw" />
+      <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51337323806_631070bbfe_b.jpg" />
       <meta name="description" property="og:description" content="Drew Olsen's Portfolio" /><meta name="author" content="Drew Olsen" />
       <meta name={siteMetadata.author} description={siteMetadata.description} />
       <title>{siteMetadata.title}</title>
