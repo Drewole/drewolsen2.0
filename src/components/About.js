@@ -18,11 +18,7 @@ const About = () => (
 			<div className="nine columns main-col">
 				<h2>About Me</h2>
 				<p>
-					My name is Drew, and I am a Full-Stack Web Developer with around eight years of web development experience. Some might consider me a Developer that can Design. I have an eye for design but also understand, can implement, and explain the technical side of Website Development.
-				</p>
-				<p>
-					My start in Web Development began ten years ago and I have strived to be on the cutting edge of the
-					new web technologies ever since. Because of this, <span className="bold">I recently graduated from an intense, 12-week boot camp to level up my back-end skills.</span> I am constantly learning so I can improve the quality of work I provide my clients, and ensure I am using the most appropriate technology for their project.
+					A full-stack engineer capable of taking projects from wireframes to deployment. My 7 years of development experience have taught me much about the front-end of web development and brought me closer to my goal: building complete web applications from scratch. So, I recently graduated from an intense 12-week boot camp from the University of Minnesota to level up my back-end skills. It's amazing what you can do with just a text editor and an internet connection and I wanted to be a part of the whole story, not just what a user sees.  For the next part of my career, I want to be engineering more challenging aspects of an application instead of just focusing on the UX. I am seeking a Junior to Mid, Full Stack Javascript position at a company where I can learn, grow, and continue to master this craft.
 				</p>
 				<p>
 					Have a project you might want my help with?

@@ -435,8 +435,8 @@ ul#nav {
 		max-height: 100%;
 		border-radius: 50%;
 		overflow: hidden;
-		border: 6px solid darken($purple, 5%);
-		box-shadow: 0 0 0 12px $purple, 0 -10px 0 7px lighten($purple, 5%);
+		border: 6px solid $purple;
+		box-shadow: 0 0 0 12px darken($purple, 5%), 0 -10px 0 7px lighten($purple, 7%);
 
 		img {
 			border-radius: 50%;
@@ -831,10 +831,10 @@ ul#nav {
 #contact {
 	padding: 75px 0 150px;
 	opacity: 1;
-	background:
-	linear-gradient(-45deg, darken($purple, 5%) 25%, transparent 25%, transparent 75%, darken($purple, 3%) 75%, darken($purple, 3%)) 0 0,
-	linear-gradient(-45deg, darken($purple, 3%) 25%, transparent 25%, transparent 75%, darken($purple, 5%) 75%, darken($purple, 5%)) 1em 1em,
-	linear-gradient(45deg, darken($purple, 3%) 17%, transparent 17%, transparent 25%, darken($purple, 3%) 25%, darken($purple, 3%) 36%, transparent 36%, transparent 64%, darken($purple, 3%) 64%, darken($purple, 3%) 75%, transparent 75%, transparent 83%, darken($purple, 3%) 83%) 1em 1em;
+background-image: radial-gradient($purple 4%, transparent 8%),
+radial-gradient($purple 4%, transparent 8%);
+background-size: 60px 60px;
+background-position: 0 0, 30px 30px;
 	background-color: darken($purple, 5%);
 	background-size: 2em 2em;
 	h2 {
