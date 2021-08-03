@@ -696,7 +696,7 @@ ul#nav {
 		display: flex;
 		flex-direction: row-reverse;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 	h4 {
 		font: 18px/24px "Montserrat", sans-serif;
@@ -726,7 +726,7 @@ ul#nav {
 	.text-content {
 		padding: 4%;
 		flex-basis: 65%;
-		max-width: 768 px;
+		max-width: 768px;
 	}
 	.gallery {
 		flex-basis: 35%;
