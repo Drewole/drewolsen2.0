@@ -1,4 +1,35 @@
-[
+[	{
+		"name": "Find'a Floof",
+		"year": "2021",
+		"slug": "find-a-floof",
+		"type": "React, Next.js, Framer Motion, Chakra UI, Bootstrap Icons, Responsive, Local Storage",
+		"shortDescription": "Fun way to browse adoptable pets using the Petfinder API.",
+		"longDescription": "Wanted to create a very mobile friendly app to browse adoptable pets. Can filter pets based on location, type, etc. Can save pets to your favorites for later viewing/reference. While on mobile, use swipe controls to select or pass on an animal",
+		"tags": "React.js, Next.js, Framer Motion, Chakra UI, Design, Development, Responsive",
+		"github":"/Drewole/findafloof",
+		"squareImg": "./images/findafloof2021-square.jpg",
+		"mainImg": "./images/findafloof2021-main.jpg",
+		"frontImg": "./images/findafloof2021-song-create.jpg",
+		"insideImg": "./images/findafloof2021-inside.jpg",
+		"mobileImg": "",
+		"extSite": "https://findafloof.com/"
+	},
+	{
+		"name": "Arrow Components",
+		"year": "2020",
+		"slug": "arrow",
+		"type": "Design & Development",
+		"shortDescription": "Trailer awning and cabinet company in need of a website refresh.",
+		"longDescription": "Trailer awning and cabinet company in need of a website refresh. Built mobile responsive and with a clean new design.",
+		"tags": "responsive, custom theme, Javascript, SCSS, Wordpress Custom Theme, manufacturing",
+		"github": "/drewole/arrow-comp",
+		"squareImg": "./images/arrow-square.jpg",
+		"mainImg": "./images/arrow-main.jpg",
+		"frontImg": "./images/arrow.jpg",
+		"insideImg": "./images/arrow-inside.jpg",
+		"mobileImg": "./images/arrow-mobile.jpg",
+		"extSite": "https://arrowcomp.com"
+	},
 	{
 		"name": "HackaMole",
 		"year": "2021",
@@ -30,22 +61,6 @@
 		"insideImg": "./images/javascript-quiz-scoreboard.jpg",
 		"mobileImg": "",
 		"extSite": "https://drewole.github.io/js-quiz-app/"
-	},
-	{
-		"name": "Find'a Floof",
-		"year": "2021",
-		"slug": "find-a-floof",
-		"type": "React, Next.js, Framer Motion, Chakra UI, Bootstrap Icons, Responsive, Local Storage",
-		"shortDescription": "Fun way to browse adoptable pets using the Petfinder API.",
-		"longDescription": "Wanted to create a very mobile friendly app to browse adoptable pets. Can filter pets based on location, type, etc. Can save pets to your favorites for later viewing/reference. While on mobile, use swipe controls to select or pass on an animal",
-		"tags": "React.js, Next.js, Framer Motion, Chakra UI, Design, Development, Responsive",
-		"github":"/Drewole/findafloof",
-		"squareImg": "./images/findafloof-square.jpg",
-		"mainImg": "./images/findafloof-main.jpg",
-		"frontImg": "./images/findafloof-song-create.jpg",
-		"insideImg": "./images/findafloof-.jpg",
-		"mobileImg": "",
-		"extSite": "https://findafloof.com/"
 	},
 	{
 		"name": "Weather Dashboard",
@@ -94,22 +109,6 @@
 		"insideImg": "./images/employee-directory-full.jpg",
 		"mobileImg": "",
 		"extSite": "https://drewole.github.io/employee-directory-react/"
-	},
-	{
-		"name": "Arrow Components",
-		"year": "2020",
-		"slug": "arrow",
-		"type": "Design & Development",
-		"shortDescription": "Trailer awning and cabinet company in need of a website refresh.",
-		"longDescription": "Trailer awning and cabinet company in need of a website refresh. Built mobile responsive and with a clean new design.",
-		"tags": "responsive, custom theme, Javascript, SCSS, Wordpress Custom Theme, manufacturing",
-		"github": "/drewole/arrow-comp",
-		"squareImg": "./images/arrow-square.jpg",
-		"mainImg": "./images/arrow-main.jpg",
-		"frontImg": "./images/arrow.jpg",
-		"insideImg": "./images/arrow-inside.jpg",
-		"mobileImg": "./images/arrow-mobile.jpg",
-		"extSite": "https://arrowcomp.com"
 	},
 	{
 		"name": "Infinite Graphics",
