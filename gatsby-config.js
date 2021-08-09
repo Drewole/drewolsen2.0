@@ -5,6 +5,19 @@ module.exports = {
     available: true,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          quality: 90,
+          breakpoints: [380, 750, 1080, 1366, 1920],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,21 +65,8 @@ module.exports = {
         trackingId: "UA-11075037-4",
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          quality: 90,
-          breakpoints: [380, 750, 1080, 1366, 1920],
-        },
-      },
-    },
-    `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-transformer-json`
+    `gatsby-plugin-transition-link`
   ],
 };

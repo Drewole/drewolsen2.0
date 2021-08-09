@@ -36,26 +36,6 @@ export const query = graphql`
                 )
               }
             }
-            insideImg {
-              childImageSharp {
-                gatsbyImageData(
-                    formats: [AUTO, WEBP]
-                    transformOptions: {fit: COVER cropFocus: NORTH}
-                    width: 800
-                    height: 800
-                )
-              }
-            }
-           	mobileImg {
-				      childImageSharp {
-                  gatsbyImageData(
-                    formats: [AUTO, WEBP]
-                    transformOptions: {fit: COVER cropFocus: NORTH}
-                    width: 800
-                    height:800
-                  )
-              }
-            }
         }
     }
 `
