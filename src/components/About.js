@@ -22,17 +22,13 @@ const About = () => (
         <h2>About Me</h2>
         <p>
           A full-stack engineer capable of taking projects from wireframes to
-          deployment. My 7 years of development experience have taught me much
+          deployment. My 8 years of development experience have taught me much
           about the front-end of web development and brought me closer to my
-          goal: building complete web applications from scratch. So, I recently
-          graduated from an intense 12-week boot camp from the University of
-          Minnesota to level up my back-end skills. It's amazing what you can do
-          with just a text editor and an internet connection and I wanted to be
-          a part of the whole story, not just what a user sees. For the next
-          part of my career, I want to be engineering more challenging aspects
-          of an application instead of just focusing on the UX. I am seeking a
-          Junior to Mid, Full Stack Javascript position at a company where I can
-          learn, grow, and continue to master this craft.
+          goal: building complete web applications from scratch. It's amazing
+          what you can do in this industry with just a text editor and an
+          internet connection and the power you can provide a buisness with to
+          find the customers they need. Have a project you need help with? Let's
+          talk!
         </p>
         <p>
           Have a project you might want my help with?
