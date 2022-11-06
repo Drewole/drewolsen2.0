@@ -27,8 +27,7 @@ const About = () => (
           goal: building complete web applications from scratch. It's amazing
           what you can do in this industry with just a text editor and an
           internet connection and the power you can provide a buisness with to
-          find the customers they need. Have a project you need help with? Let's
-          talk!
+          find the customers they need.
         </p>
         <p>
           Have a project you might want my help with?
